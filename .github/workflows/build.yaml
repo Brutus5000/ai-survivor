@@ -1,7 +1,7 @@
 name: Build
 on: [push]
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
     steps:
         # Step 1: Checkout the repository
@@ -20,11 +20,11 @@ jobs:
         # Step 3: Run Flyway migrations
         - name: Run Flyway Migrations on SQLite
           run: |
-            flyway -url=jdbc:sqlite:data/database.sqlite -locations=filesystem:data migrate
+            flyway -url=jdbc:sqlite:ai-survivor.sqlite -locations=filesystem:data migrate
 
         # Step 4: Upload the SQLite database as an artifact
         - name: Upload SQLite database artifact
-          uses: actions/upload-artifact@v3
+          uses: actions/upload-artifact@v4
           with:
-            name: migrated-sqlite-db
-            path: data/database.sqlite
+            name: ai-survivor.sqlite
+            path: ai-survivor.sqlite
