@@ -12,11 +12,13 @@ This project aims to make the data available as one large [SQLite](https://www.s
 
 Based on complete data people will be able to do fancy statistics.
 
-## Where can I download it?
+## How to use and download it?
 
 Every sucessful pipeline run generates a file in
 the [Actions tab](https://github.com/Brutus5000/ai-survivor/actions?query=branch%3Amain). Click at the latest run at the
-top and scroll down.
+top and scroll down. There you can download the sqlite database.
+
+A visualization of the database schema is also available [here](https://brutus5000.github.io/ai-survivor).
 
 ## How can I contribute?
 

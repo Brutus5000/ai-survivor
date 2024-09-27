@@ -28,3 +28,25 @@ jobs:
           with:
             name: ai-survivor.sqlite
             path: ai-survivor.sqlite
+
+        # Step 5: Install SchemaSpy
+        - name: Install SchemaSpy
+          if: github.ref == 'refs/heads/main'  # Condition for main branch
+          run: |
+            curl -L https://github.com/schemaspy/schemaspy/releases/download/v6.1.0/schemaspy-6.1.0.jar -o schemaspy.jar
+            sudo apt-get update -qq && sudo apt-get install -qq -y openjdk-21-jdk graphviz
+
+        # Step 6: Generate SchemaSpy Report
+        - name: Generate SchemaSpy Report
+          if: github.ref == 'refs/heads/main'  # Condition for main branch
+          run: |
+            curl -L https://github.com/xerial/sqlite-jdbc/releases/download/3.46.1.3/sqlite-jdbc-3.46.1.3.jar -o sqlite-jdbc.jar
+            java -jar schemaspy.jar -debug -dp sqlite-jdbc.jar -t sqlite-xerial -db ai-survivor.sqlite -u dummy -p dummy -cat % -s % -o schemaspy-output
+
+        # Step 7: Deploy to GitHub Pages
+        - name: Deploy SchemaSpy to GitHub Pages
+          if: github.ref == 'refs/heads/main'  # Condition for main branch
+          uses: peaceiris/actions-gh-pages@v4
+          with:
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            publish_dir: schemaspy-output
