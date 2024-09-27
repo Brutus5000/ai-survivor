@@ -1,4 +1,4 @@
-digraph "twoDegreesRelationshipsDiagramImplied" {
+digraph "twoDegreesRelationshipsDiagram" {
   graph [
     rankdir="RL"
     bgcolor="#ffffff"
@@ -18,23 +18,14 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
   edge [
     arrowsize="0.8"
   ];
-  "game":"died_first_leader_id":w -> "leaders":"elipses":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
-  "game":"game_type_id":w -> "game_type":"game_type_id.type":e [arrowhead=none dir=back arrowtail=crowodot];
+  "game":"game_type_id":w -> "game_type":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "game":"season_id":w -> "seasons":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
-  "game":"second_leader_id":w -> "leaders":"elipses":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "game":"victory_turn":w -> "turn_years":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
-  "game":"winner_leader_id":w -> "leaders":"elipses":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "game_participants":"elipses":w -> "turn_years":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "game_participants":"elipses":w -> "game":"game_season_id":e [arrowhead=none dir=back arrowtail=crowodot];
-  "game_participants":"elipses":w -> "leaders":"elipses":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
-  "game_participants":"elipses":w -> "leaders":"elipses":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "game_participants":"elipses":w -> "game":"season_id":e [arrowhead=none dir=back arrowtail=crowodot];
-  "game_wars":"elipses":w -> "leaders":"elipses":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
-  "game_wars":"elipses":w -> "turn_years":"elipses":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
-  "game_wars":"elipses":w -> "turn_years":"elipses":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
-  "game_wars":"elipses":w -> "game":"game_season_id":e [arrowhead=none dir=back arrowtail=crowodot];
-  "game_wars":"elipses":w -> "game":"season_id":e [arrowhead=none dir=back arrowtail=crowodot];
-  "game_wars":"elipses":w -> "leaders":"elipses":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
+  "game_wars":"game_season_id":w -> "game":"game_season_id":e [arrowhead=none dir=back arrowtail=crowodot];
+  "game_wars":"season_id":w -> "game":"season_id":e [arrowhead=none dir=back arrowtail=crowodot];
   "game" [
    label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
@@ -46,7 +37,7 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
       <TR><TD PORT="second_leader_id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="../../images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="198" HEIGHT="16">second_leader_id</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="died_first_leader_id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="../../images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="198" HEIGHT="16">died_first_leader_id</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 6</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">4 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 3</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">4 &gt;</TD></TR>
     </TABLE>>
     URL="game.html"
     target="_top"
@@ -57,7 +48,7 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT"><B>game_participants</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 5</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 3</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
     </TABLE>>
     URL="game_participants.html"
     target="_top"
@@ -65,11 +56,10 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
   ];
   "game_type" [
    label=<
-    <TABLE BORDER="2" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
-      <TR><TD COLSPAN="4"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT"><B>game_type</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="game_type_id" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="../../images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="92" HEIGHT="16">game_type_id</TD></TR></TABLE></TD><TD PORT="game_type_id.type" ALIGN="LEFT">text[2000000000]</TD></TR>
-      <TR><TD PORT="sort_order" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="92" HEIGHT="16">sort_order</TD></TR></TABLE></TD><TD PORT="sort_order.type" ALIGN="LEFT">integer[2000000000]</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 0</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">4 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">1 &gt;</TD></TR>
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT"><B>game_type</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">4 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">1 &gt;</TD></TR>
     </TABLE>>
     URL="game_type.html"
     target="_top"
@@ -77,25 +67,19 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
   ];
   "game_wars" [
    label=<
-    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
-      <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT"><B>game_wars</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 6</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
+    <TABLE BORDER="2" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="4"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT"><B>game_wars</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="season_id" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="../../images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="148" HEIGHT="16">season_id</TD></TR></TABLE></TD><TD PORT="season_id.type" ALIGN="LEFT">integer[2000000000]</TD></TR>
+      <TR><TD PORT="game_season_id" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="../../images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="148" HEIGHT="16">game_season_id</TD></TR></TABLE></TD><TD PORT="game_season_id.type" ALIGN="LEFT">text[2000000000]</TD></TR>
+      <TR><TD PORT="declared_by_leader_id" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="../../images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="148" HEIGHT="16">declared_by_leader_id</TD></TR></TABLE></TD><TD PORT="declared_by_leader_id.type" ALIGN="LEFT">text[2000000000]</TD></TR>
+      <TR><TD PORT="target_leader_id" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="../../images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="148" HEIGHT="16">target_leader_id</TD></TR></TABLE></TD><TD PORT="target_leader_id.type" ALIGN="LEFT">text[2000000000]</TD></TR>
+      <TR><TD PORT="declaring_turn" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="../../images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="148" HEIGHT="16">declaring_turn</TD></TR></TABLE></TD><TD PORT="declaring_turn.type" ALIGN="LEFT">integer[2000000000]</TD></TR>
+      <TR><TD PORT="ending_turn" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="../../images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="148" HEIGHT="16">ending_turn</TD></TR></TABLE></TD><TD PORT="ending_turn.type" ALIGN="LEFT">integer[2000000000]</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 2</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 &gt;</TD></TR>
     </TABLE>>
     URL="game_wars.html"
     target="_top"
     tooltip="game_wars"
-  ];
-  "leaders" [
-   label=<
-    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
-      <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT"><B>leaders</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">26 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">9 &gt;</TD></TR>
-    </TABLE>>
-    URL="leaders.html"
-    target="_top"
-    tooltip="leaders"
   ];
   "seasons" [
    label=<
@@ -113,7 +97,7 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT"><B>turn_years</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">501 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">4 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">501 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">2 &gt;</TD></TR>
     </TABLE>>
     URL="turn_years.html"
     target="_top"

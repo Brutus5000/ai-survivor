@@ -1,14 +1,14 @@
 leaders
 turn_years
-seasons
 civilizations
 game_type
+seasons
 technologies
 traits
+game
 civilization_leaders
 leader_traits
 starting_technologies
 game_participants
 game_wars
-game
 flyway_schema_history

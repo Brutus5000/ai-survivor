@@ -46,16 +46,21 @@
       </table>
       <table name="game" numRows="0" remarks="" type="TABLE">
          <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="season_id" nullable="false" remarks="" size="2000000000" type="INTEGER" typeCode="4">
-            <parent column="season_id" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="seasons"/>
+            <child column="season_id" foreignKey="game_participants_game_fk" implied="false" onDeleteCascade="false" table="game_participants"/>
+            <child column="season_id" foreignKey="game_wars_game_fk" implied="false" onDeleteCascade="false" table="game_wars"/>
+            <parent column="season_id" foreignKey="" implied="false" onDeleteCascade="false" table="seasons"/>
          </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="game_season_id" nullable="false" remarks="" size="2000000000" type="TEXT" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="game_season_id" nullable="false" remarks="" size="2000000000" type="TEXT" typeCode="12">
+            <child column="game_season_id" foreignKey="game_participants_game_fk" implied="false" onDeleteCascade="false" table="game_participants"/>
+            <child column="game_season_id" foreignKey="game_wars_game_fk" implied="false" onDeleteCascade="false" table="game_wars"/>
+         </column>
          <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="game_type_id" nullable="false" remarks="" size="2000000000" type="TEXT" typeCode="12">
-            <parent column="game_type_id" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="game_type"/>
+            <parent column="game_type_id" foreignKey="" implied="false" onDeleteCascade="false" table="game_type"/>
          </column>
          <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="victory_turn" nullable="true" remarks="" size="2000000000" type="INTEGER" typeCode="4">
-            <parent column="turn" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="turn_years"/>
+            <parent column="turn" foreignKey="" implied="false" onDeleteCascade="false" table="turn_years"/>
          </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="victory_type" nullable="true" remarks="" size="2000000000" type="INTEGER" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="victory_type" nullable="true" remarks="" size="2000000000" type="TEXT" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="winner_leader_id" nullable="true" remarks="" size="2000000000" type="TEXT" typeCode="12">
             <parent column="leader_id" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="leaders"/>
          </column>
@@ -72,15 +77,17 @@
       </table>
       <table name="game_participants" numRows="0" remarks="" type="TABLE">
          <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="season_id" nullable="false" remarks="" size="2000000000" type="INTEGER" typeCode="4">
-            <parent column="season_id" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="seasons"/>
+            <parent column="season_id" foreignKey="game_participants_game_fk" implied="false" onDeleteCascade="false" table="game"/>
          </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="game_season_id" nullable="false" remarks="" size="2000000000" type="TEXT" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="game_season_id" nullable="false" remarks="" size="2000000000" type="TEXT" typeCode="12">
+            <parent column="game_season_id" foreignKey="game_participants_game_fk" implied="false" onDeleteCascade="false" table="game"/>
+         </column>
          <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="leader_id" nullable="false" remarks="" size="2000000000" type="TEXT" typeCode="12">
             <parent column="leader_id" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="leaders"/>
          </column>
          <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="turn_order_position" nullable="true" remarks="" size="2000000000" type="INTEGER" typeCode="4"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="died_on_turn" nullable="true" remarks="" size="2000000000" type="INTEGER" typeCode="4">
-            <parent column="turn" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="turn_years"/>
+            <parent column="turn" foreignKey="" implied="false" onDeleteCascade="false" table="turn_years"/>
          </column>
          <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="killed_by_leader_id" nullable="true" remarks="" size="2000000000" type="TEXT" typeCode="12">
             <parent column="leader_id" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="leaders"/>
@@ -88,7 +95,7 @@
       </table>
       <table name="game_type" numRows="4" remarks="" type="TABLE">
          <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="game_type_id" nullable="false" remarks="" size="2000000000" type="TEXT" typeCode="12">
-            <child column="game_type_id" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="game"/>
+            <child column="game_type_id" foreignKey="" implied="false" onDeleteCascade="false" table="game"/>
          </column>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="sort_order" nullable="true" remarks="" size="2000000000" type="INTEGER" typeCode="4"/>
          <primaryKey column="game_type_id" sequenceNumberInPK="1"/>
@@ -101,9 +108,11 @@
       </table>
       <table name="game_wars" numRows="0" remarks="" type="TABLE">
          <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="season_id" nullable="false" remarks="" size="2000000000" type="INTEGER" typeCode="4">
-            <parent column="season_id" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="seasons"/>
+            <parent column="season_id" foreignKey="game_wars_game_fk" implied="false" onDeleteCascade="false" table="game"/>
          </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="game_season_id" nullable="false" remarks="" size="2000000000" type="TEXT" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="game_season_id" nullable="false" remarks="" size="2000000000" type="TEXT" typeCode="12">
+            <parent column="game_season_id" foreignKey="game_wars_game_fk" implied="false" onDeleteCascade="false" table="game"/>
+         </column>
          <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="declared_by_leader_id" nullable="false" remarks="" size="2000000000" type="TEXT" typeCode="12">
             <parent column="leader_id" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="leaders"/>
          </column>
@@ -148,9 +157,7 @@
       </table>
       <table name="seasons" numRows="8" remarks="" type="TABLE">
          <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="season_id" nullable="false" remarks="" size="2000000000" type="INTEGER" typeCode="4">
-            <child column="season_id" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="game"/>
-            <child column="season_id" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="game_participants"/>
-            <child column="season_id" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="game_wars"/>
+            <child column="season_id" foreignKey="" implied="false" onDeleteCascade="false" table="game"/>
          </column>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="year" nullable="false" remarks="" size="2000000000" type="INTEGER" typeCode="4"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="storybook_url" nullable="true" remarks="" size="2000000000" type="TEXT" typeCode="12"/>
@@ -195,8 +202,8 @@
       </table>
       <table name="turn_years" numRows="501" remarks="" type="TABLE">
          <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="turn" nullable="false" remarks="" size="2000000000" type="INTEGER" typeCode="4">
-            <child column="victory_turn" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="game"/>
-            <child column="died_on_turn" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="game_participants"/>
+            <child column="victory_turn" foreignKey="" implied="false" onDeleteCascade="false" table="game"/>
+            <child column="died_on_turn" foreignKey="" implied="false" onDeleteCascade="false" table="game_participants"/>
             <child column="declaring_turn" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="game_wars"/>
             <child column="ending_turn" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="game_wars"/>
          </column>

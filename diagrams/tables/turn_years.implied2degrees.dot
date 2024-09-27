@@ -19,19 +19,21 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
     arrowsize="0.8"
   ];
   "game":"died_first_leader_id":w -> "leaders":"elipses":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
-  "game":"game_type_id":w -> "game_type":"elipses":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
-  "game":"season_id":w -> "seasons":"elipses":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
+  "game":"game_type_id":w -> "game_type":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
+  "game":"season_id":w -> "seasons":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "game":"second_leader_id":w -> "leaders":"elipses":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
-  "game":"victory_turn":w -> "turn_years":"turn.type":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
+  "game":"victory_turn":w -> "turn_years":"turn.type":e [arrowhead=none dir=back arrowtail=crowodot];
   "game":"winner_leader_id":w -> "leaders":"elipses":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
-  "game_participants":"died_on_turn":w -> "turn_years":"turn.type":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
+  "game_participants":"died_on_turn":w -> "turn_years":"turn.type":e [arrowhead=none dir=back arrowtail=crowodot];
+  "game_participants":"game_season_id":w -> "game":"game_season_id":e [arrowhead=none dir=back arrowtail=crowodot];
   "game_participants":"killed_by_leader_id":w -> "leaders":"elipses":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "game_participants":"leader_id":w -> "leaders":"elipses":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
-  "game_participants":"season_id":w -> "seasons":"elipses":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
+  "game_participants":"season_id":w -> "game":"season_id":e [arrowhead=none dir=back arrowtail=crowodot];
   "game_wars":"declared_by_leader_id":w -> "leaders":"elipses":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "game_wars":"declaring_turn":w -> "turn_years":"turn.type":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "game_wars":"ending_turn":w -> "turn_years":"turn.type":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
-  "game_wars":"season_id":w -> "seasons":"elipses":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
+  "game_wars":"game_season_id":w -> "game":"game_season_id":e [arrowhead=none dir=back arrowtail=crowodot];
+  "game_wars":"season_id":w -> "game":"season_id":e [arrowhead=none dir=back arrowtail=crowodot];
   "game_wars":"target_leader_id":w -> "leaders":"elipses":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "game" [
    label=<
@@ -44,7 +46,7 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
       <TR><TD PORT="second_leader_id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="../../images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="198" HEIGHT="16">second_leader_id</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="died_first_leader_id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="../../images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="198" HEIGHT="16">died_first_leader_id</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 6</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 6</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">4 &gt;</TD></TR>
     </TABLE>>
     URL="game.html"
     target="_top"
@@ -55,11 +57,12 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT"><B>game_participants</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="season_id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="../../images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="132" HEIGHT="16">season_id</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="game_season_id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="../../images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="132" HEIGHT="16">game_season_id</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="leader_id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="../../images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="132" HEIGHT="16">leader_id</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="died_on_turn" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="../../images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="132" HEIGHT="16">died_on_turn</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="killed_by_leader_id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="../../images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="132" HEIGHT="16">killed_by_leader_id</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 4</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 5</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
     </TABLE>>
     URL="game_participants.html"
     target="_top"
@@ -81,12 +84,12 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT"><B>game_wars</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="season_id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="../../images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="148" HEIGHT="16">season_id</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="game_season_id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="../../images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="148" HEIGHT="16">game_season_id</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="declared_by_leader_id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="../../images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="148" HEIGHT="16">declared_by_leader_id</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="target_leader_id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="../../images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="148" HEIGHT="16">target_leader_id</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="declaring_turn" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="../../images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="148" HEIGHT="16">declaring_turn</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="ending_turn" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="../../images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="148" HEIGHT="16">ending_turn</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 5</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 6</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
     </TABLE>>
     URL="game_wars.html"
     target="_top"
@@ -108,7 +111,7 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT"><B>seasons</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">8 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">3 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">8 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">1 &gt;</TD></TR>
     </TABLE>>
     URL="seasons.html"
     target="_top"

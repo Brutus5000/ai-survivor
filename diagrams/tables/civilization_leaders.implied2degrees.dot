@@ -23,9 +23,13 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
   "game":"elipses":w -> "leaders":"leader_id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "game":"elipses":w -> "leaders":"leader_id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "game":"elipses":w -> "leaders":"leader_id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
+  "game_participants":"elipses":w -> "game":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "game_participants":"elipses":w -> "leaders":"leader_id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "game_participants":"elipses":w -> "leaders":"leader_id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
+  "game_participants":"elipses":w -> "game":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "game_wars":"elipses":w -> "leaders":"leader_id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
+  "game_wars":"elipses":w -> "game":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
+  "game_wars":"elipses":w -> "game":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "game_wars":"elipses":w -> "leaders":"leader_id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "leader_traits":"elipses":w -> "leaders":"leader_id":e [arrowhead=none dir=back arrowtail=crowodot];
   "starting_technologies":"elipses":w -> "civilizations":"civilization_id":e [arrowhead=none dir=back arrowtail=crowodot];
@@ -57,7 +61,7 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT"><B>game</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 6</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 6</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">4 &gt;</TD></TR>
     </TABLE>>
     URL="game.html"
     target="_top"
@@ -68,7 +72,7 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT"><B>game_participants</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 4</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 5</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
     </TABLE>>
     URL="game_participants.html"
     target="_top"
@@ -79,7 +83,7 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT"><B>game_wars</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 5</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 6</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
     </TABLE>>
     URL="game_wars.html"
     target="_top"

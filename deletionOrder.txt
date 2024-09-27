@@ -1,14 +1,14 @@
 flyway_schema_history
-game
 game_wars
 game_participants
 starting_technologies
 leader_traits
 civilization_leaders
+game
 traits
 technologies
+seasons
 game_type
 civilizations
-seasons
 turn_years
 leaders
