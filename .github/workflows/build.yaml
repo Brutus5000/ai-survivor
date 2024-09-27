@@ -1,0 +1,30 @@
+name: Build
+on: [push]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+        # Step 1: Checkout the repository
+        - name: Checkout repository
+          uses: actions/checkout@v4
+
+        # Step 2: Install Flyway
+        - name: Install Flyway CLI
+          run: |
+            curl -L https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/10.18.2/flyway-commandline-10.18.2-linux-x64.tar.gz -o flyway.tar.gz
+            tar -xzf flyway.tar.gz
+            sudo mv flyway-10.18.2 /usr/local/flyway
+            sudo ln -s /usr/local/flyway/flyway /usr/local/bin/flyway
+            flyway -v  # Verify the installation
+
+        # Step 3: Run Flyway migrations
+        - name: Run Flyway Migrations on SQLite
+          run: |
+            flyway -url=jdbc:sqlite:data/database.sqlite -locations=filesystem:data migrate
+
+        # Step 4: Upload the SQLite database as an artifact
+        - name: Upload SQLite database artifact
+          uses: actions/upload-artifact@v3
+          with:
+            name: migrated-sqlite-db
+            path: data/database.sqlite
