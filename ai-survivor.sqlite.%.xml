@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<database name="ai-survivor.sqlite" schema="%" type="SQLite - 3.46.1">
+   <tables>
+      <table name="civilization_leaders" numRows="26" remarks="" type="TABLE">
+         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="civilization_id" nullable="false" remarks="" size="2000000000" type="TEXT" typeCode="12">
+            <parent column="civilization_id" foreignKey="" implied="false" onDeleteCascade="false" table="civilizations"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="leader_id" nullable="false" remarks="" size="2000000000" type="TEXT" typeCode="12">
+            <parent column="leader_id" foreignKey="" implied="false" onDeleteCascade="false" table="leaders"/>
+         </column>
+      </table>
+      <table name="civilizations" numRows="18" remarks="" type="TABLE">
+         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="civilization_id" nullable="false" remarks="" size="2000000000" type="TEXT" typeCode="12">
+            <child column="civilization_id" foreignKey="" implied="false" onDeleteCascade="false" table="civilization_leaders"/>
+            <child column="civilization_id" foreignKey="" implied="false" onDeleteCascade="false" table="starting_technologies"/>
+         </column>
+         <primaryKey column="civilization_id" sequenceNumberInPK="1"/>
+         <index name="civilizations_s_pk" unique="true">
+            <column ascending="true" name="civilization_id"/>
+         </index>
+         <index name="sqlite_autoindex_civilizations_1" unique="true">
+            <column ascending="true" name="civilization_id"/>
+         </index>
+      </table>
+      <table name="flyway_schema_history" numRows="10" remarks="" type="TABLE">
+         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="installed_rank" nullable="false" remarks="" size="2000000000" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="version" nullable="true" remarks="" size="50" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="description" nullable="false" remarks="" size="200" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="type" nullable="false" remarks="" size="20" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="script" nullable="false" remarks="" size="1000" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="checksum" nullable="true" remarks="" size="2000000000" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="6" name="installed_by" nullable="false" remarks="" size="100" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="strftime('%Y-%m-%d %H:%M:%f','now')" digits="0" id="7" name="installed_on" nullable="false" remarks="" size="2000000000" type="TEXT" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="8" name="execution_time" nullable="false" remarks="" size="2000000000" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="9" name="success" nullable="false" remarks="" size="2000000000" type="BOOLEAN" typeCode="4"/>
+         <primaryKey column="installed_rank" sequenceNumberInPK="1"/>
+         <index name="flyway_schema_history_s_pk" unique="true">
+            <column ascending="true" name="installed_rank"/>
+         </index>
+         <index name="flyway_schema_history_s_idx" unique="false">
+            <column ascending="true" name="success"/>
+         </index>
+         <index name="sqlite_autoindex_flyway_schema_history_1" unique="true">
+            <column ascending="true" name="installed_rank"/>
+         </index>
+      </table>
+      <table name="game" numRows="0" remarks="" type="TABLE">
+         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="season_id" nullable="false" remarks="" size="2000000000" type="INTEGER" typeCode="4">
+            <parent column="season_id" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="seasons"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="game_season_id" nullable="false" remarks="" size="2000000000" type="TEXT" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="game_type_id" nullable="false" remarks="" size="2000000000" type="TEXT" typeCode="12">
+            <parent column="game_type_id" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="game_type"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="victory_turn" nullable="true" remarks="" size="2000000000" type="INTEGER" typeCode="4">
+            <parent column="turn" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="turn_years"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="victory_type" nullable="true" remarks="" size="2000000000" type="INTEGER" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="winner_leader_id" nullable="true" remarks="" size="2000000000" type="TEXT" typeCode="12">
+            <parent column="leader_id" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="leaders"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="6" name="second_leader_id" nullable="true" remarks="" size="2000000000" type="TEXT" typeCode="12">
+            <parent column="leader_id" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="leaders"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="7" name="died_first_leader_id" nullable="true" remarks="" size="2000000000" type="TEXT" typeCode="12">
+            <parent column="leader_id" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="leaders"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="8" name="writeup_url" nullable="true" remarks="" size="2000000000" type="TEXT" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="9" name="video_url" nullable="true" remarks="" size="2000000000" type="TEXT" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="10" name="alternate_history_writeup_url" nullable="true" remarks="" size="2000000000" type="TEXT" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="11" name="alternate_history_video_url" nullable="true" remarks="" size="2000000000" type="TEXT" typeCode="12"/>
+      </table>
+      <table name="game_participants" numRows="0" remarks="" type="TABLE">
+         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="season_id" nullable="false" remarks="" size="2000000000" type="INTEGER" typeCode="4">
+            <parent column="season_id" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="seasons"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="game_season_id" nullable="false" remarks="" size="2000000000" type="TEXT" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="leader_id" nullable="false" remarks="" size="2000000000" type="TEXT" typeCode="12">
+            <parent column="leader_id" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="leaders"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="turn_order_position" nullable="true" remarks="" size="2000000000" type="INTEGER" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="died_on_turn" nullable="true" remarks="" size="2000000000" type="INTEGER" typeCode="4">
+            <parent column="turn" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="turn_years"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="killed_by_leader_id" nullable="true" remarks="" size="2000000000" type="TEXT" typeCode="12">
+            <parent column="leader_id" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="leaders"/>
+         </column>
+      </table>
+      <table name="game_type" numRows="4" remarks="" type="TABLE">
+         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="game_type_id" nullable="false" remarks="" size="2000000000" type="TEXT" typeCode="12">
+            <child column="game_type_id" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="game"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="sort_order" nullable="true" remarks="" size="2000000000" type="INTEGER" typeCode="4"/>
+         <primaryKey column="game_type_id" sequenceNumberInPK="1"/>
+         <index name="game_type_s_pk" unique="true">
+            <column ascending="true" name="game_type_id"/>
+         </index>
+         <index name="sqlite_autoindex_game_type_1" unique="true">
+            <column ascending="true" name="game_type_id"/>
+         </index>
+      </table>
+      <table name="game_wars" numRows="0" remarks="" type="TABLE">
+         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="season_id" nullable="false" remarks="" size="2000000000" type="INTEGER" typeCode="4">
+            <parent column="season_id" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="seasons"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="game_season_id" nullable="false" remarks="" size="2000000000" type="TEXT" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="declared_by_leader_id" nullable="false" remarks="" size="2000000000" type="TEXT" typeCode="12">
+            <parent column="leader_id" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="leaders"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="target_leader_id" nullable="false" remarks="" size="2000000000" type="TEXT" typeCode="12">
+            <parent column="leader_id" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="leaders"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="declaring_turn" nullable="true" remarks="" size="2000000000" type="INTEGER" typeCode="4">
+            <parent column="turn" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="turn_years"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="ending_turn" nullable="true" remarks="" size="2000000000" type="INTEGER" typeCode="4">
+            <parent column="turn" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="turn_years"/>
+         </column>
+      </table>
+      <table name="leader_traits" numRows="0" remarks="" type="TABLE">
+         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="leader_id" nullable="false" remarks="" size="2000000000" type="TEXT" typeCode="12">
+            <parent column="leader_id" foreignKey="" implied="false" onDeleteCascade="false" table="leaders"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="trait_id" nullable="false" remarks="" size="2000000000" type="TEXT" typeCode="12">
+            <parent column="trait_id" foreignKey="" implied="false" onDeleteCascade="false" table="traits"/>
+         </column>
+      </table>
+      <table name="leaders" numRows="26" remarks="" type="TABLE">
+         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="leader_id" nullable="false" remarks="" size="2000000000" type="TEXT" typeCode="12">
+            <child column="leader_id" foreignKey="" implied="false" onDeleteCascade="false" table="civilization_leaders"/>
+            <child column="died_first_leader_id" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="game"/>
+            <child column="second_leader_id" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="game"/>
+            <child column="winner_leader_id" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="game"/>
+            <child column="killed_by_leader_id" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="game_participants"/>
+            <child column="leader_id" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="game_participants"/>
+            <child column="declared_by_leader_id" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="game_wars"/>
+            <child column="target_leader_id" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="game_wars"/>
+            <child column="leader_id" foreignKey="" implied="false" onDeleteCascade="false" table="leader_traits"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="peace_weight" nullable="false" remarks="" size="2000000000" type="INTEGER" typeCode="4"/>
+         <primaryKey column="leader_id" sequenceNumberInPK="1"/>
+         <index name="leaders_s_pk" unique="true">
+            <column ascending="true" name="leader_id"/>
+         </index>
+         <index name="sqlite_autoindex_leaders_1" unique="true">
+            <column ascending="true" name="leader_id"/>
+         </index>
+      </table>
+      <table name="seasons" numRows="8" remarks="" type="TABLE">
+         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="season_id" nullable="false" remarks="" size="2000000000" type="INTEGER" typeCode="4">
+            <child column="season_id" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="game"/>
+            <child column="season_id" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="game_participants"/>
+            <child column="season_id" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="game_wars"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="year" nullable="false" remarks="" size="2000000000" type="INTEGER" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="storybook_url" nullable="true" remarks="" size="2000000000" type="TEXT" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="video_playlist_url" nullable="true" remarks="" size="2000000000" type="TEXT" typeCode="12"/>
+         <primaryKey column="season_id" sequenceNumberInPK="1"/>
+         <index name="seasons_s_pk" unique="true">
+            <column ascending="true" name="season_id"/>
+         </index>
+      </table>
+      <table name="starting_technologies" numRows="36" remarks="" type="TABLE">
+         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="civilization_id" nullable="false" remarks="" size="2000000000" type="TEXT" typeCode="12">
+            <parent column="civilization_id" foreignKey="" implied="false" onDeleteCascade="false" table="civilizations"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="technology_id" nullable="false" remarks="" size="2000000000" type="TEXT" typeCode="12">
+            <parent column="technology_id" foreignKey="" implied="false" onDeleteCascade="false" table="technologies"/>
+         </column>
+      </table>
+      <table name="technologies" numRows="86" remarks="" type="TABLE">
+         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="technology_id" nullable="false" remarks="" size="2000000000" type="TEXT" typeCode="12">
+            <child column="technology_id" foreignKey="" implied="false" onDeleteCascade="false" table="starting_technologies"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="cost" nullable="false" remarks="" size="2000000000" type="INTEGER" typeCode="4"/>
+         <primaryKey column="technology_id" sequenceNumberInPK="1"/>
+         <index name="technologies_s_pk" unique="true">
+            <column ascending="true" name="technology_id"/>
+         </index>
+         <index name="sqlite_autoindex_technologies_1" unique="true">
+            <column ascending="true" name="technology_id"/>
+         </index>
+      </table>
+      <table name="traits" numRows="8" remarks="" type="TABLE">
+         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="trait_id" nullable="false" remarks="" size="2000000000" type="TEXT" typeCode="12">
+            <child column="trait_id" foreignKey="" implied="false" onDeleteCascade="false" table="leader_traits"/>
+         </column>
+         <primaryKey column="trait_id" sequenceNumberInPK="1"/>
+         <index name="traits_s_pk" unique="true">
+            <column ascending="true" name="trait_id"/>
+         </index>
+         <index name="sqlite_autoindex_traits_1" unique="true">
+            <column ascending="true" name="trait_id"/>
+         </index>
+      </table>
+      <table name="turn_years" numRows="501" remarks="" type="TABLE">
+         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="turn" nullable="false" remarks="" size="2000000000" type="INTEGER" typeCode="4">
+            <child column="victory_turn" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="game"/>
+            <child column="died_on_turn" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="game_participants"/>
+            <child column="declaring_turn" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="game_wars"/>
+            <child column="ending_turn" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="game_wars"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="year" nullable="false" remarks="" size="2000000000" type="INTEGER" typeCode="4"/>
+         <primaryKey column="turn" sequenceNumberInPK="1"/>
+         <index name="turn_years_s_pk" unique="true">
+            <column ascending="true" name="turn"/>
+         </index>
+         <index name="turn_years_year_index" unique="false">
+            <column ascending="true" name="year"/>
+         </index>
+      </table>
+   </tables>
+</database>
