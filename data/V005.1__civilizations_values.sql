@@ -1,4 +1,4 @@
-insert into civilizations (id, starting_technologies) values
+insert into civilizations (civilization_id) values
 
 (
     'AMERICA'

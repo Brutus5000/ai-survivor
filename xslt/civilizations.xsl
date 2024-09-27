@@ -2,7 +2,7 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns:civ4="x-schema:CIV4CivilizationsSchema.xml">
     <xsl:output method="text" omit-xml-declaration="yes"/>
-    <xsl:template match="/">insert into civilizations (id, starting_technologies) values
+    <xsl:template match="/">insert into civilizations (civilization_id) values
         <xsl:for-each select="//civ4:CivilizationInfo[not(civ4:Type = ('CIVILIZATION_BARBARIAN', 'CIVILIZATION_MINOR'))]">
             (
             '<xsl:value-of select="substring-after(civ4:Type, 'CIVILIZATION_')"/>'
