@@ -1,4 +1,6 @@
 create table traits
 (
-        id  text not null
+        trait_id  text not null
+            constraint traits_pk
+                primary key
 );

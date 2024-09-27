@@ -1,17 +1,17 @@
 -- Mapping from turn numbers to years on normal speed
 
-create table turn_year
+create table turn_years
 (
     turn integer not null
-        constraint turn_year_pk
+        constraint turn_years_pk
             primary key,
     year integer not null
 );
 
-create index turn_year_year_index
-    on turn_year (year);
+create index turn_years_year_index
+    on turn_years (year);
 
-insert into turn_year (turn, year)
+insert into turn_years (turn, year)
 values (0, -4000),
        (1, -3960),
        (2, -3920),

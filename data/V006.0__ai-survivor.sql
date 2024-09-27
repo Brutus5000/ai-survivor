@@ -1,12 +1,14 @@
-create table season
+create table seasons
 (
-    season_id           integer not null,
+    season_id           integer not null
+        constraint seasons_pk
+            primary key,
     year                integer not null,
     storybook_url       text,
     video_playlist_url  text
 );
 
-insert into season (season_id, year, storybook_url, video_playlist_url)  values
+insert into seasons (season_id, year, storybook_url, video_playlist_url)  values
     (1, 2014, 'https://www.sullla.com/civ4survivor.html', null),
     (2, 2015, 'https://www.sullla.com/civ4survivor2.html', null),
     (3, 2017, 'https://www.sullla.com/civ4survivor3.html', null),
@@ -18,7 +20,9 @@ insert into season (season_id, year, storybook_url, video_playlist_url)  values
 
 create table game_type
 (
-    game_type_id    text not null,
+    game_type_id    text not null
+        constraint game_type_pk
+            primary key,
     sort_order      integer
 );
 

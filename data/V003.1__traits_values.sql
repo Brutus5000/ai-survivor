@@ -1,4 +1,4 @@
-insert into traits (id) values
+insert into traits (trait_id) values
 
 ('PHILOSOPHICAL'),
 ('AGGRESSIVE'),
