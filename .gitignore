@@ -1,0 +1,14 @@
+### original game date ###
+xml/
+
+### generated data ###
+.sqlite
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### VS Code ###
+.vscode/

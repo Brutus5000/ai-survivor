@@ -1,0 +1,431 @@
+insert into technologies (technology_id, cost) values
+
+(
+    'MYSTICISM',
+    50
+)
+,
+(
+    'MEDITATION',
+    80
+)
+,
+(
+    'POLYTHEISM',
+    100
+)
+,
+(
+    'PRIESTHOOD',
+    60
+)
+,
+(
+    'MONOTHEISM',
+    120
+)
+,
+(
+    'MONARCHY',
+    300
+)
+,
+(
+    'LITERATURE',
+    200
+)
+,
+(
+    'CODE_OF_LAWS',
+    350
+)
+,
+(
+    'DRAMA',
+    300
+)
+,
+(
+    'FEUDALISM',
+    700
+)
+,
+(
+    'THEOLOGY',
+    500
+)
+,
+(
+    'MUSIC',
+    600
+)
+,
+(
+    'CIVIL_SERVICE',
+    800
+)
+,
+(
+    'GUILDS',
+    1000
+)
+,
+(
+    'DIVINE_RIGHT',
+    1200
+)
+,
+(
+    'NATIONALISM',
+    1800
+)
+,
+(
+    'MILITARY_TRADITION',
+    2000
+)
+,
+(
+    'CONSTITUTION',
+    2000
+)
+,
+(
+    'LIBERALISM',
+    1400
+)
+,
+(
+    'DEMOCRACY',
+    2800
+)
+,
+(
+    'CORPORATION',
+    1600
+)
+,
+(
+    'FASCISM',
+    2400
+)
+,
+(
+    'UTOPIA',
+    2800
+)
+,
+(
+    'MASS_MEDIA',
+    3600
+)
+,
+(
+    'ECOLOGY',
+    5500
+)
+,
+(
+    'FISHING',
+    40
+)
+,
+(
+    'THE_WHEEL',
+    60
+)
+,
+(
+    'AGRICULTURE',
+    60
+)
+,
+(
+    'POTTERY',
+    80
+)
+,
+(
+    'SAILING',
+    100
+)
+,
+(
+    'WRITING',
+    120
+)
+,
+(
+    'MATHEMATICS',
+    250
+)
+,
+(
+    'ALPHABET',
+    300
+)
+,
+(
+    'CALENDAR',
+    350
+)
+,
+(
+    'CURRENCY',
+    400
+)
+,
+(
+    'PHILOSOPHY',
+    800
+)
+,
+(
+    'PAPER',
+    600
+)
+,
+(
+    'BANKING',
+    700
+)
+,
+(
+    'EDUCATION',
+    1800
+)
+,
+(
+    'PRINTING_PRESS',
+    1600
+)
+,
+(
+    'ECONOMICS',
+    1400
+)
+,
+(
+    'ASTRONOMY',
+    2000
+)
+,
+(
+    'CHEMISTRY',
+    1800
+)
+,
+(
+    'SCIENTIFIC_METHOD',
+    2400
+)
+,
+(
+    'PHYSICS',
+    4000
+)
+,
+(
+    'BIOLOGY',
+    3600
+)
+,
+(
+    'MEDICINE',
+    4500
+)
+,
+(
+    'ELECTRICITY',
+    4500
+)
+,
+(
+    'COMBUSTION',
+    3600
+)
+,
+(
+    'FISSION',
+    5500
+)
+,
+(
+    'FLIGHT',
+    5000
+)
+,
+(
+    'PLASTICS',
+    7000
+)
+,
+(
+    'COMPOSITES',
+    7500
+)
+,
+(
+    'GENETICS',
+    7000
+)
+,
+(
+    'FIBER_OPTICS',
+    7500
+)
+,
+(
+    'FUSION',
+    8000
+)
+,
+(
+    'HUNTING',
+    40
+)
+,
+(
+    'MINING',
+    50
+)
+,
+(
+    'ARCHERY',
+    60
+)
+,
+(
+    'MASONRY',
+    80
+)
+,
+(
+    'ANIMAL_HUSBANDRY',
+    100
+)
+,
+(
+    'BRONZE_WORKING',
+    120
+)
+,
+(
+    'HORSEBACK_RIDING',
+    250
+)
+,
+(
+    'IRON_WORKING',
+    200
+)
+,
+(
+    'METAL_CASTING',
+    450
+)
+,
+(
+    'COMPASS',
+    400
+)
+,
+(
+    'CONSTRUCTION',
+    350
+)
+,
+(
+    'MACHINERY',
+    700
+)
+,
+(
+    'ENGINEERING',
+    1000
+)
+,
+(
+    'OPTICS',
+    600
+)
+,
+(
+    'GUNPOWDER',
+    1200
+)
+,
+(
+    'REPLACEABLE_PARTS',
+    1800
+)
+,
+(
+    'RIFLING',
+    2400
+)
+,
+(
+    'STEAM_POWER',
+    3200
+)
+,
+(
+    'STEEL',
+    2800
+)
+,
+(
+    'ASSEMBLY_LINE',
+    5000
+)
+,
+(
+    'RAILROAD',
+    4500
+)
+,
+(
+    'ARTILLERY',
+    4000
+)
+,
+(
+    'INDUSTRIALISM',
+    6500
+)
+,
+(
+    'RADIO',
+    6000
+)
+,
+(
+    'REFRIGERATION',
+    4000
+)
+,
+(
+    'COMPUTERS',
+    6500
+)
+,
+(
+    'ROCKETRY',
+    5000
+)
+,
+(
+    'SATELLITES',
+    6000
+)
+,
+(
+    'ROBOTICS',
+    8000
+)
+,
+(
+    'FUTURE_TECH',
+    10000
+);

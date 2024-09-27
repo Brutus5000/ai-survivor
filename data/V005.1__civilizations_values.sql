@@ -1,0 +1,387 @@
+insert into civilizations (id, starting_technologies) values
+
+(
+    'AMERICA'
+)
+,
+(
+    'ARABIA'
+)
+,
+(
+    'AZTEC'
+)
+,
+(
+    'CHINA'
+)
+,
+(
+    'EGYPT'
+)
+,
+(
+    'ENGLAND'
+)
+,
+(
+    'FRANCE'
+)
+,
+(
+    'GERMANY'
+)
+,
+(
+    'GREECE'
+)
+,
+(
+    'INCA'
+)
+,
+(
+    'INDIA'
+)
+,
+(
+    'JAPAN'
+)
+,
+(
+    'MALI'
+)
+,
+(
+    'MONGOL'
+)
+,
+(
+    'PERSIA'
+)
+,
+(
+    'ROME'
+)
+,
+(
+    'RUSSIA'
+)
+,
+(
+    'SPAIN'
+);
+
+insert into civilization_leaders (civilization_id, leader_id) values
+
+(
+    'AMERICA',
+    'WASHINGTON'
+)
+,
+(
+    'AMERICA',
+    'FRANKLIN_ROOSEVELT'
+)
+,
+(
+    'ARABIA',
+    'SALADIN'
+)
+,
+(
+    'AZTEC',
+    'MONTEZUMA'
+)
+,
+(
+    'CHINA',
+    'QIN_SHI_HUANG'
+)
+,
+(
+    'CHINA',
+    'CHINESE_LEADER'
+)
+,
+(
+    'EGYPT',
+    'HATSHEPSUT'
+)
+,
+(
+    'ENGLAND',
+    'ELIZABETH'
+)
+,
+(
+    'ENGLAND',
+    'VICTORIA'
+)
+,
+(
+    'FRANCE',
+    'LOUIS_XIV'
+)
+,
+(
+    'FRANCE',
+    'NAPOLEON'
+)
+,
+(
+    'GERMANY',
+    'FREDERICK'
+)
+,
+(
+    'GERMANY',
+    'BISMARCK'
+)
+,
+(
+    'GREECE',
+    'ALEXANDER'
+)
+,
+(
+    'INCA',
+    'HUAYNA_CAPAC'
+)
+,
+(
+    'INDIA',
+    'ASOKA'
+)
+,
+(
+    'INDIA',
+    'GANDHI'
+)
+,
+(
+    'JAPAN',
+    'TOKUGAWA'
+)
+,
+(
+    'MALI',
+    'MANSA_MUSA'
+)
+,
+(
+    'MONGOL',
+    'GENGHIS_KHAN'
+)
+,
+(
+    'MONGOL',
+    'KUBLAI_KHAN'
+)
+,
+(
+    'PERSIA',
+    'CYRUS'
+)
+,
+(
+    'ROME',
+    'JULIUS_CAESAR'
+)
+,
+(
+    'RUSSIA',
+    'PETER'
+)
+,
+(
+    'RUSSIA',
+    'CATHERINE'
+)
+,
+(
+    'SPAIN',
+    'ISABELLA'
+);
+
+insert into starting_technologies (civilization_id, technology_id) values
+
+(
+    'AMERICA',
+    'FISHING'
+)
+,
+(
+    'AMERICA',
+    'AGRICULTURE'
+)
+,
+(
+    'ARABIA',
+    'THE_WHEEL'
+)
+,
+(
+    'ARABIA',
+    'MYSTICISM'
+)
+,
+(
+    'AZTEC',
+    'MYSTICISM'
+)
+,
+(
+    'AZTEC',
+    'HUNTING'
+)
+,
+(
+    'CHINA',
+    'AGRICULTURE'
+)
+,
+(
+    'CHINA',
+    'MINING'
+)
+,
+(
+    'EGYPT',
+    'THE_WHEEL'
+)
+,
+(
+    'EGYPT',
+    'AGRICULTURE'
+)
+,
+(
+    'ENGLAND',
+    'FISHING'
+)
+,
+(
+    'ENGLAND',
+    'MINING'
+)
+,
+(
+    'FRANCE',
+    'THE_WHEEL'
+)
+,
+(
+    'FRANCE',
+    'AGRICULTURE'
+)
+,
+(
+    'GERMANY',
+    'HUNTING'
+)
+,
+(
+    'GERMANY',
+    'MINING'
+)
+,
+(
+    'GREECE',
+    'FISHING'
+)
+,
+(
+    'GREECE',
+    'HUNTING'
+)
+,
+(
+    'INCA',
+    'AGRICULTURE'
+)
+,
+(
+    'INCA',
+    'MYSTICISM'
+)
+,
+(
+    'INDIA',
+    'MYSTICISM'
+)
+,
+(
+    'INDIA',
+    'MINING'
+)
+,
+(
+    'JAPAN',
+    'FISHING'
+)
+,
+(
+    'JAPAN',
+    'THE_WHEEL'
+)
+,
+(
+    'MALI',
+    'THE_WHEEL'
+)
+,
+(
+    'MALI',
+    'MINING'
+)
+,
+(
+    'MONGOL',
+    'THE_WHEEL'
+)
+,
+(
+    'MONGOL',
+    'HUNTING'
+)
+,
+(
+    'PERSIA',
+    'AGRICULTURE'
+)
+,
+(
+    'PERSIA',
+    'HUNTING'
+)
+,
+(
+    'ROME',
+    'FISHING'
+)
+,
+(
+    'ROME',
+    'MINING'
+)
+,
+(
+    'RUSSIA',
+    'HUNTING'
+)
+,
+(
+    'RUSSIA',
+    'MINING'
+)
+,
+(
+    'SPAIN',
+    'FISHING'
+)
+,
+(
+    'SPAIN',
+    'MYSTICISM'
+);
