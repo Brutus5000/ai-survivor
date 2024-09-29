@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <database name="ai-survivor.sqlite" schema="%" type="SQLite - 3.46.1">
    <tables>
-      <table name="civilization_leaders" numRows="26" remarks="" type="TABLE">
+      <table name="civilization_leaders" numRows="52" remarks="" type="TABLE">
          <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="civilization_id" nullable="false" remarks="" size="2000000000" type="TEXT" typeCode="12">
             <parent column="civilization_id" foreignKey="" implied="false" onDeleteCascade="false" table="civilizations"/>
          </column>
@@ -9,7 +9,7 @@
             <parent column="leader_id" foreignKey="" implied="false" onDeleteCascade="false" table="leaders"/>
          </column>
       </table>
-      <table name="civilizations" numRows="18" remarks="" type="TABLE">
+      <table name="civilizations" numRows="34" remarks="" type="TABLE">
          <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="civilization_id" nullable="false" remarks="" size="2000000000" type="TEXT" typeCode="12">
             <child column="civilization_id" foreignKey="" implied="false" onDeleteCascade="false" table="civilization_leaders"/>
             <child column="civilization_id" foreignKey="" implied="false" onDeleteCascade="false" table="starting_technologies"/>
@@ -134,7 +134,7 @@
             <parent column="trait_id" foreignKey="" implied="false" onDeleteCascade="false" table="traits"/>
          </column>
       </table>
-      <table name="leaders" numRows="26" remarks="" type="TABLE">
+      <table name="leaders" numRows="52" remarks="" type="TABLE">
          <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="leader_id" nullable="false" remarks="" size="2000000000" type="TEXT" typeCode="12">
             <child column="leader_id" foreignKey="" implied="false" onDeleteCascade="false" table="civilization_leaders"/>
             <child column="died_first_leader_id" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="game"/>
@@ -167,7 +167,7 @@
             <column ascending="true" name="season_id"/>
          </index>
       </table>
-      <table name="starting_technologies" numRows="36" remarks="" type="TABLE">
+      <table name="starting_technologies" numRows="68" remarks="" type="TABLE">
          <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="civilization_id" nullable="false" remarks="" size="2000000000" type="TEXT" typeCode="12">
             <parent column="civilization_id" foreignKey="" implied="false" onDeleteCascade="false" table="civilizations"/>
          </column>
@@ -175,7 +175,7 @@
             <parent column="technology_id" foreignKey="" implied="false" onDeleteCascade="false" table="technologies"/>
          </column>
       </table>
-      <table name="technologies" numRows="86" remarks="" type="TABLE">
+      <table name="technologies" numRows="92" remarks="" type="TABLE">
          <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="technology_id" nullable="false" remarks="" size="2000000000" type="TEXT" typeCode="12">
             <child column="technology_id" foreignKey="" implied="false" onDeleteCascade="false" table="starting_technologies"/>
          </column>
@@ -188,7 +188,7 @@
             <column ascending="true" name="technology_id"/>
          </index>
       </table>
-      <table name="traits" numRows="8" remarks="" type="TABLE">
+      <table name="traits" numRows="11" remarks="" type="TABLE">
          <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="trait_id" nullable="false" remarks="" size="2000000000" type="TEXT" typeCode="12">
             <child column="trait_id" foreignKey="" implied="false" onDeleteCascade="false" table="leader_traits"/>
          </column>
