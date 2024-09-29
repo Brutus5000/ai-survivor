@@ -146,6 +146,11 @@ insert into technologies (technology_id, cost) values
 )
 ,
 (
+    'AESTHETICS',
+    300
+)
+,
+(
     'SAILING',
     100
 )
@@ -256,6 +261,11 @@ insert into technologies (technology_id, cost) values
 )
 ,
 (
+    'ADVANCED_FLIGHT',
+    5000
+)
+,
+(
     'PLASTICS',
     7000
 )
@@ -263,6 +273,11 @@ insert into technologies (technology_id, cost) values
 (
     'COMPOSITES',
     7500
+)
+,
+(
+    'STEALTH',
+    8000
 )
 ,
 (
@@ -361,6 +376,11 @@ insert into technologies (technology_id, cost) values
 )
 ,
 (
+    'MILITARY_SCIENCE',
+    2000
+)
+,
+(
     'RIFLING',
     2400
 )
@@ -406,8 +426,18 @@ insert into technologies (technology_id, cost) values
 )
 ,
 (
+    'SUPERCONDUCTORS',
+    6500
+)
+,
+(
     'COMPUTERS',
     6500
+)
+,
+(
+    'LASER',
+    7000
 )
 ,
 (

@@ -11,8 +11,23 @@ insert into leaders (leader_id, peace_weight) values
 )
 ,
 (
+    'AUGUSTUS',
+    8
+)
+,
+(
     'BISMARCK',
     6
+)
+,
+(
+    'BOUDICA',
+    2
+)
+,
+(
+    'BRENNUS',
+    0
 )
 ,
 (
@@ -21,8 +36,28 @@ insert into leaders (leader_id, peace_weight) values
 )
 ,
 (
+    'CHARLEMAGNE',
+    6
+)
+,
+(
+    'CHURCHILL',
+    6
+)
+,
+(
     'CYRUS',
+    3
+)
+,
+(
+    'DARIUS',
     8
+)
+,
+(
+    'DE_GAULLE',
+    0
 )
 ,
 (
@@ -46,6 +81,21 @@ insert into leaders (leader_id, peace_weight) values
 )
 ,
 (
+    'GILGAMESH',
+    2
+)
+,
+(
+    'HAMMURABI',
+    8
+)
+,
+(
+    'HANNIBAL',
+    2
+)
+,
+(
     'HATSHEPSUT',
     9
 )
@@ -61,13 +111,28 @@ insert into leaders (leader_id, peace_weight) values
 )
 ,
 (
+    'JOAO',
+    6
+)
+,
+(
     'JULIUS_CAESAR',
+    4
+)
+,
+(
+    'JUSTINIAN',
     4
 )
 ,
 (
     'KUBLAI_KHAN',
     1
+)
+,
+(
+    'LINCOLN',
+    9
 )
 ,
 (
@@ -86,6 +151,11 @@ insert into leaders (leader_id, peace_weight) values
 )
 ,
 (
+    'MEHMED',
+    2
+)
+,
+(
     'MONTEZUMA',
     0
 )
@@ -93,6 +163,16 @@ insert into leaders (leader_id, peace_weight) values
 (
     'NAPOLEON',
     0
+)
+,
+(
+    'PACAL',
+    2
+)
+,
+(
+    'PERICLES',
+    6
 )
 ,
 (
@@ -106,6 +186,16 @@ insert into leaders (leader_id, peace_weight) values
 )
 ,
 (
+    'RAMESSES',
+    6
+)
+,
+(
+    'RAGNAR',
+    0
+)
+,
+(
     'FRANKLIN_ROOSEVELT',
     8
 )
@@ -113,6 +203,31 @@ insert into leaders (leader_id, peace_weight) values
 (
     'SALADIN',
     4
+)
+,
+(
+    'SHAKA',
+    2
+)
+,
+(
+    'SITTING_BULL',
+    8
+)
+,
+(
+    'STALIN',
+    2
+)
+,
+(
+    'SULEIMAN',
+    4
+)
+,
+(
+    'SURYAVARMAN',
+    1
 )
 ,
 (
@@ -126,6 +241,21 @@ insert into leaders (leader_id, peace_weight) values
 )
 ,
 (
+    'WANGKON',
+    8
+)
+,
+(
     'WASHINGTON',
     8
+)
+,
+(
+    'WILLEM_VAN_ORANJE',
+    4
+)
+,
+(
+    'ZARA_YAQOB',
+    6
 );

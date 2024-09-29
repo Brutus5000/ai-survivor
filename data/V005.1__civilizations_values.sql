@@ -13,6 +13,22 @@ insert into civilizations (civilization_id) values
 )
 ,
 (
+    'BABYLON'
+)
+,
+(
+    'BYZANTIUM'
+)
+,
+(
+    'CARTHAGE'
+)
+,
+(
+    'CELT'
+)
+,
+(
     'CHINA'
 )
 ,
@@ -22,6 +38,10 @@ insert into civilizations (civilization_id) values
 ,
 (
     'ENGLAND'
+)
+,
+(
+    'ETHIOPIA'
 )
 ,
 (
@@ -37,6 +57,10 @@ insert into civilizations (civilization_id) values
 )
 ,
 (
+    'HOLY_ROMAN'
+)
+,
+(
     'INCA'
 )
 ,
@@ -49,7 +73,19 @@ insert into civilizations (civilization_id) values
 )
 ,
 (
+    'KHMER'
+)
+,
+(
+    'KOREA'
+)
+,
+(
     'MALI'
+)
+,
+(
+    'MAYA'
 )
 ,
 (
@@ -57,7 +93,23 @@ insert into civilizations (civilization_id) values
 )
 ,
 (
+    'NATIVE_AMERICA'
+)
+,
+(
+    'NETHERLANDS'
+)
+,
+(
+    'OTTOMAN'
+)
+,
+(
     'PERSIA'
+)
+,
+(
+    'PORTUGAL'
 )
 ,
 (
@@ -70,6 +122,18 @@ insert into civilizations (civilization_id) values
 ,
 (
     'SPAIN'
+)
+,
+(
+    'SUMERIA'
+)
+,
+(
+    'VIKING'
+)
+,
+(
+    'ZULU'
 );
 
 insert into civilization_leaders (civilization_id, leader_id) values
@@ -85,6 +149,11 @@ insert into civilization_leaders (civilization_id, leader_id) values
 )
 ,
 (
+    'AMERICA',
+    'LINCOLN'
+)
+,
+(
     'ARABIA',
     'SALADIN'
 )
@@ -92,6 +161,31 @@ insert into civilization_leaders (civilization_id, leader_id) values
 (
     'AZTEC',
     'MONTEZUMA'
+)
+,
+(
+    'BABYLON',
+    'HAMMURABI'
+)
+,
+(
+    'BYZANTIUM',
+    'JUSTINIAN'
+)
+,
+(
+    'CARTHAGE',
+    'HANNIBAL'
+)
+,
+(
+    'CELT',
+    'BRENNUS'
+)
+,
+(
+    'CELT',
+    'BOUDICA'
 )
 ,
 (
@@ -110,6 +204,11 @@ insert into civilization_leaders (civilization_id, leader_id) values
 )
 ,
 (
+    'EGYPT',
+    'RAMESSES'
+)
+,
+(
     'ENGLAND',
     'ELIZABETH'
 )
@@ -120,6 +219,16 @@ insert into civilization_leaders (civilization_id, leader_id) values
 )
 ,
 (
+    'ENGLAND',
+    'CHURCHILL'
+)
+,
+(
+    'ETHIOPIA',
+    'ZARA_YAQOB'
+)
+,
+(
     'FRANCE',
     'LOUIS_XIV'
 )
@@ -127,6 +236,11 @@ insert into civilization_leaders (civilization_id, leader_id) values
 (
     'FRANCE',
     'NAPOLEON'
+)
+,
+(
+    'FRANCE',
+    'DE_GAULLE'
 )
 ,
 (
@@ -142,6 +256,16 @@ insert into civilization_leaders (civilization_id, leader_id) values
 (
     'GREECE',
     'ALEXANDER'
+)
+,
+(
+    'GREECE',
+    'PERICLES'
+)
+,
+(
+    'HOLY_ROMAN',
+    'CHARLEMAGNE'
 )
 ,
 (
@@ -165,8 +289,23 @@ insert into civilization_leaders (civilization_id, leader_id) values
 )
 ,
 (
+    'KHMER',
+    'SURYAVARMAN'
+)
+,
+(
+    'KOREA',
+    'WANGKON'
+)
+,
+(
     'MALI',
     'MANSA_MUSA'
+)
+,
+(
+    'MAYA',
+    'PACAL'
 )
 ,
 (
@@ -180,13 +319,48 @@ insert into civilization_leaders (civilization_id, leader_id) values
 )
 ,
 (
+    'NATIVE_AMERICA',
+    'SITTING_BULL'
+)
+,
+(
+    'NETHERLANDS',
+    'WILLEM_VAN_ORANJE'
+)
+,
+(
+    'OTTOMAN',
+    'MEHMED'
+)
+,
+(
+    'OTTOMAN',
+    'SULEIMAN'
+)
+,
+(
     'PERSIA',
     'CYRUS'
 )
 ,
 (
+    'PERSIA',
+    'DARIUS'
+)
+,
+(
+    'PORTUGAL',
+    'JOAO'
+)
+,
+(
     'ROME',
     'JULIUS_CAESAR'
+)
+,
+(
+    'ROME',
+    'AUGUSTUS'
 )
 ,
 (
@@ -200,8 +374,28 @@ insert into civilization_leaders (civilization_id, leader_id) values
 )
 ,
 (
+    'RUSSIA',
+    'STALIN'
+)
+,
+(
     'SPAIN',
     'ISABELLA'
+)
+,
+(
+    'SUMERIA',
+    'GILGAMESH'
+)
+,
+(
+    'VIKING',
+    'RAGNAR'
+)
+,
+(
+    'ZULU',
+    'SHAKA'
 );
 
 insert into starting_technologies (civilization_id, technology_id) values
@@ -237,6 +431,46 @@ insert into starting_technologies (civilization_id, technology_id) values
 )
 ,
 (
+    'BABYLON',
+    'AGRICULTURE'
+)
+,
+(
+    'BABYLON',
+    'THE_WHEEL'
+)
+,
+(
+    'BYZANTIUM',
+    'THE_WHEEL'
+)
+,
+(
+    'BYZANTIUM',
+    'MYSTICISM'
+)
+,
+(
+    'CARTHAGE',
+    'FISHING'
+)
+,
+(
+    'CARTHAGE',
+    'MINING'
+)
+,
+(
+    'CELT',
+    'HUNTING'
+)
+,
+(
+    'CELT',
+    'MYSTICISM'
+)
+,
+(
     'CHINA',
     'AGRICULTURE'
 )
@@ -263,6 +497,16 @@ insert into starting_technologies (civilization_id, technology_id) values
 ,
 (
     'ENGLAND',
+    'MINING'
+)
+,
+(
+    'ETHIOPIA',
+    'HUNTING'
+)
+,
+(
+    'ETHIOPIA',
     'MINING'
 )
 ,
@@ -297,6 +541,16 @@ insert into starting_technologies (civilization_id, technology_id) values
 )
 ,
 (
+    'HOLY_ROMAN',
+    'MYSTICISM'
+)
+,
+(
+    'HOLY_ROMAN',
+    'HUNTING'
+)
+,
+(
     'INCA',
     'AGRICULTURE'
 )
@@ -327,6 +581,26 @@ insert into starting_technologies (civilization_id, technology_id) values
 )
 ,
 (
+    'KHMER',
+    'HUNTING'
+)
+,
+(
+    'KHMER',
+    'MINING'
+)
+,
+(
+    'KOREA',
+    'MINING'
+)
+,
+(
+    'KOREA',
+    'MYSTICISM'
+)
+,
+(
     'MALI',
     'THE_WHEEL'
 )
@@ -337,6 +611,16 @@ insert into starting_technologies (civilization_id, technology_id) values
 )
 ,
 (
+    'MAYA',
+    'MINING'
+)
+,
+(
+    'MAYA',
+    'MYSTICISM'
+)
+,
+(
     'MONGOL',
     'THE_WHEEL'
 )
@@ -347,6 +631,36 @@ insert into starting_technologies (civilization_id, technology_id) values
 )
 ,
 (
+    'NATIVE_AMERICA',
+    'AGRICULTURE'
+)
+,
+(
+    'NATIVE_AMERICA',
+    'FISHING'
+)
+,
+(
+    'NETHERLANDS',
+    'AGRICULTURE'
+)
+,
+(
+    'NETHERLANDS',
+    'FISHING'
+)
+,
+(
+    'OTTOMAN',
+    'THE_WHEEL'
+)
+,
+(
+    'OTTOMAN',
+    'AGRICULTURE'
+)
+,
+(
     'PERSIA',
     'AGRICULTURE'
 )
@@ -354,6 +668,16 @@ insert into starting_technologies (civilization_id, technology_id) values
 (
     'PERSIA',
     'HUNTING'
+)
+,
+(
+    'PORTUGAL',
+    'FISHING'
+)
+,
+(
+    'PORTUGAL',
+    'MINING'
 )
 ,
 (
@@ -384,4 +708,34 @@ insert into starting_technologies (civilization_id, technology_id) values
 (
     'SPAIN',
     'MYSTICISM'
+)
+,
+(
+    'SUMERIA',
+    'AGRICULTURE'
+)
+,
+(
+    'SUMERIA',
+    'THE_WHEEL'
+)
+,
+(
+    'VIKING',
+    'FISHING'
+)
+,
+(
+    'VIKING',
+    'HUNTING'
+)
+,
+(
+    'ZULU',
+    'AGRICULTURE'
+)
+,
+(
+    'ZULU',
+    'HUNTING'
 );

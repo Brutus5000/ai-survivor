@@ -7,4 +7,7 @@ insert into traits (trait_id) values
 ('INDUSTRIOUS'),
 ('CREATIVE'),
 ('FINANCIAL'),
-('ORGANIZED');
+('ORGANIZED'),
+('CHARISMATIC'),
+('PROTECTIVE'),
+('IMPERIALIST');
