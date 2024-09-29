@@ -12,7 +12,6 @@ function transform() {
   docker run -it --rm -v "./../data/":/sql -u $(id -u ${USER}):$(id -g ${USER}) sqlfluff/sqlfluff fix --dialect sqlite "$3"
 }
 
-# Currently Civ4 xml files need to be copied into ../xml
 transform technologies.xsl "$BTS_XML/Technologies/CIV4TechInfos.xml" V002.1__technologies_values.sql
 transform traits.xsl "$WARLORDS_XML/Civilizations/CIV4TraitInfos.xml" V003.1__traits_values.sql
 transform leaders.xsl "$BTS_XML/Civilizations/CIV4LeaderHeadInfos.xml" V004.1__leaders_values.sql
