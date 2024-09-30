@@ -158,8 +158,8 @@
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                             <tr>
-                                                <td title="game_wars.declared_by_leader_id&#39;s name implies that it&#39;s a child of leaders.leader_id, but it doesn&#39;t reference that column."><a href='leaders.html'>leaders</a><span class='relatedKey'>.leader_id</span></td>
-                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td title="game_wars.[target_leader_id, declared_by_leader_id, ending_turn, declaring_turn] references turn_years.[leader_id, leader_id, turn, turn] via "><a href='leaders.html'>leaders</a><span class='relatedKey'>.leader_id</span></td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                         </table>
                                     </td>
@@ -179,8 +179,8 @@
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                             <tr>
-                                                <td title="game_wars.target_leader_id&#39;s name implies that it&#39;s a child of leaders.leader_id, but it doesn&#39;t reference that column."><a href='leaders.html'>leaders</a><span class='relatedKey'>.leader_id</span></td>
-                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td title="game_wars.[target_leader_id, declared_by_leader_id, ending_turn, declaring_turn] references turn_years.[leader_id, leader_id, turn, turn] via "><a href='leaders.html'>leaders</a><span class='relatedKey'>.leader_id</span></td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                         </table>
                                     </td>
@@ -200,8 +200,8 @@
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                             <tr>
-                                                <td title="game_wars.declaring_turn&#39;s name implies that it&#39;s a child of turn_years.turn, but it doesn&#39;t reference that column."><a href='turn_years.html'>turn_years</a><span class='relatedKey'>.turn</span></td>
-                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td title="game_wars.[target_leader_id, declared_by_leader_id, ending_turn, declaring_turn] references turn_years.[leader_id, leader_id, turn, turn] via "><a href='turn_years.html'>turn_years</a><span class='relatedKey'>.turn</span></td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                         </table>
                                     </td>
@@ -221,8 +221,8 @@
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                             <tr>
-                                                <td title="game_wars.ending_turn&#39;s name implies that it&#39;s a child of turn_years.turn, but it doesn&#39;t reference that column."><a href='turn_years.html'>turn_years</a><span class='relatedKey'>.turn</span></td>
-                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td title="game_wars.[target_leader_id, declared_by_leader_id, ending_turn, declaring_turn] references turn_years.[leader_id, leader_id, turn, turn] via "><a href='turn_years.html'>turn_years</a><span class='relatedKey'>.turn</span></td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                         </table>
                                     </td>
@@ -247,40 +247,19 @@
                                 <ul class="nav nav-tabs pull-left ui-sortable-handle">
                                     <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
                                     <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
-                                    <li class=""><a href="#oneimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">One implied</a></li>
-                                    <li class=""><a href="#twoimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two implied</a></li>
                                 </ul>
                                 <div class="tab-content no-padding">
                                     <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
-<area shape="rect" id="node1" href="game_wars.html" target="_top" title="game_wars" alt="" coords="363,36,777,281">
-<area shape="rect" id="node2" href="game.html" target="_top" title="game" alt="" coords="5,5,319,299">
-</map>
-                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/game_wars.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
-                                    </div>
-                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
-                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
-<area shape="rect" id="node1" href="game.html" target="_top" title="game" alt="" coords="293,79,607,372">
-<area shape="rect" id="node2" href="game_type.html" target="_top" title="game_type" alt="" coords="38,111,217,199">
-<area shape="rect" id="node3" href="seasons.html" target="_top" title="seasons" alt="" coords="49,5,206,93">
-<area shape="rect" id="node4" href="turn_years.html" target="_top" title="turn_years" alt="" coords="39,336,216,424">
-<area shape="rect" id="node5" href="game_victory_type.html" target="_top" title="game_victory_type" alt="" coords="5,216,249,304">
-<area shape="rect" id="node6" href="game_participants.html" target="_top" title="game_participants" alt="" coords="737,339,979,427">
-<area shape="rect" id="node7" href="game_wars.html" target="_top" title="game_wars" alt="" coords="651,76,1065,321">
-</map>
-                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/game_wars.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
-                                    </div>
-                                    <div class="chart tab-pane " id="oneimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
-                                        <map id="oneDegreeRelationshipsDiagramImplied" name="oneDegreeRelationshipsDiagramImplied">
 <area shape="rect" id="node1" href="game.html" target="_top" title="game" alt="" coords="227,5,540,299">
 <area shape="rect" id="node2" href="leaders.html" target="_top" title="leaders" alt="" coords="8,181,180,299">
 <area shape="rect" id="node3" href="turn_years.html" target="_top" title="turn_years" alt="" coords="5,348,183,471">
 <area shape="rect" id="node4" href="game_wars.html" target="_top" title="game_wars" alt="" coords="584,219,999,464">
 </map>
-                                        <a name='diagram'><img id="oneimpliedDegreeImg" src="../diagrams/tables/game_wars.implied1degrees.png" usemap="#oneDegreeRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/game_wars.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
                                     </div>
-                                    <div class="chart tab-pane " id="twoimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
-                                        <map id="twoDegreesRelationshipsDiagramImplied" name="twoDegreesRelationshipsDiagramImplied">
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
 <area shape="rect" id="node1" href="civilization_leaders.html" target="_top" title="civilization_leaders" alt="" coords="326,615,574,703">
 <area shape="rect" id="node2" href="leaders.html" target="_top" title="leaders" alt="" coords="41,349,213,467">
 <area shape="rect" id="node3" href="game.html" target="_top" title="game" alt="" coords="293,163,607,456">
@@ -293,7 +272,7 @@
 <area shape="rect" id="node10" href="leader_pools.html" target="_top" title="leader_pools" alt="" coords="353,5,547,93">
 <area shape="rect" id="node11" href="leader_traits.html" target="_top" title="leader_traits" alt="" coords="353,473,547,561">
 </map>
-                                        <a name='diagram'><img id="twoimpliedDegreeImg" src="../diagrams/tables/game_wars.implied2degrees.png" usemap="#twoDegreesRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/game_wars.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
                                     </div>
                                 </div>
                             </div>
