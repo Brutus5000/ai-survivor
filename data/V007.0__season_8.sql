@@ -26,7 +26,7 @@ values
 (8, 'GAME_2', 'QUALIFIER', 317, 'DOMINATION', 'JUSTINIAN', 'GILGAMESH', 'TOKUGAWA', 'https://www.sullla.com/Civ4/civ4survivor8-2.html','https://www.twitch.tv/videos/2166207009', 'https://www.sullla.com/Civ4/civ4survivor8-2A.html',null),
 (8, 'GAME_3', 'QUALIFIER', 339, 'CULTURE', 'SITTING_BULL', 'FREDERICK', 'SHAKA', 'https://www.twitch.tv/videos/2178199424', 'https://www.sullla.com/Civ4/civ4survivor8-3.html','https://www.sullla.com/Civ4/civ4survivor8-3A.html',null),
 (8, 'GAME_4', 'QUALIFIER', 281, 'CULTURE', 'MANSA_MUSA', 'QIN_SHI_HUANG', 'SALADIN', 'https://www.twitch.tv/videos/2184306932', 'https://www.sullla.com/Civ4/civ4survivor8-4.html',null,null),
-(8, 'GAME_5', 'QUALIFIER', 316, 'CULTURE', 'RAMESSES', 'HATSHEPSUT', 'DARIUS', 'https://www.twitch.tv/videos/2195993945', 'https://www.sullla.com/Civ4/civ4survivor8-5.html','https://www.sullla.com/Civ4/civ4survivor8-5A.html',null),
+(8, 'GAME_5', 'QUALIFIER', 316, 'CULTURE', 'RAMESSES', 'PACAL', 'DARIUS', 'https://www.twitch.tv/videos/2195993945', 'https://www.sullla.com/Civ4/civ4survivor8-5.html','https://www.sullla.com/Civ4/civ4survivor8-5A.html',null),
 (8, 'GAME_6', 'QUALIFIER', 321, 'SPACESHIP', 'VICTORIA', 'GHANDI', 'NAPOLEON','https://www.twitch.tv/videos/2202035355', 'https://www.sullla.com/Civ4/civ4survivor8-6.html','https://www.sullla.com/Civ4/civ4survivor8-6A.html',null),
 (8, 'GAME_7', 'QUALIFIER', 362, 'CULTURE', 'ELIZABETH', 'MEHMED', 'CHARLEMAGNE', 'https://www.twitch.tv/videos/2208241818', 'https://www.sullla.com/Civ4/civ4survivor8-7.html',null,null),
 (8, 'GAME_8', 'QUALIFIER', 295, 'DIPLOMACY', 'AUGUSTUS', 'LINCOLN', 'LOUIS_XIV','https://www.twitch.tv/videos/2214273955', 'https://www.sullla.com/Civ4/civ4survivor8-8.html',null,null),
@@ -108,8 +108,125 @@ insert into game_wars (season_id, game_season_id, declared_by_leader_id, target_
 (8, 'GAME_3', 'SHAKA', 'WILLEM_VAN_ORANJE', 87, 154),
 (8, 'GAME_3', 'HANNIBAL', 'SITTING_BULL', 92, 109),
 (8, 'GAME_3', 'FREDERICK', 'SHAKA', 144, 210),
+(8, 'GAME_3', 'HANNIBAL', 'SITTING_BULL', 156, 237),
 (8, 'GAME_3', 'WILLEM_VAN_ORANJE', 'SITTING_BULL', 179, 215),
 (8, 'GAME_3', 'FREDERICK', 'HANNIBAL', 228, 237),
 (8, 'GAME_3', 'SITTING_BULL', 'WILLEM_VAN_ORANJE', 286, 339);
--- the War Declaration Counter of the live stream counts 9, but I can only find 8
 
+
+-- Season 8: Game 4
+
+insert into game_participants (season_id, game_season_id, leader_id, turn_order_position, final_place, died_on_turn, killed_by_leader_id) values
+(8, 'GAME_4', 'MANSA_MUSA', 1, 1, null, null),
+(8, 'GAME_4', 'ALEXANDER', 2, 5, null, null),
+(8, 'GAME_4', 'PERICLES', 3, 6, null, null),
+(8, 'GAME_4', 'QIN_SHI_HUANG', 4, 2, null, null),
+(8, 'GAME_4', 'SALADIN', 5, null, 189, 'WASHINGTON'),
+(8, 'GAME_4', 'WASHINGTON', 6, 4, null, null),
+(8, 'GAME_4', 'ZARA_YAQOB', 7, 3, null, null);
+
+insert into game_wars (season_id, game_season_id, declared_by_leader_id, target_leader_id, declaring_turn, ending_turn) values
+(8, 'GAME_4', 'SALADIN', 'WASHINGTON', 112, 189),
+(8, 'GAME_4', 'PERICLES', 'ALEXANDER', 114, 181),
+(8, 'GAME_4', 'ZARA_YAQOB', 'QIN_SHI_HUANG', 115, 126),
+(8, 'GAME_4', 'QIN_SHI_HUANG', 'SALADIN', 141, 189),
+(8, 'GAME_4', 'ALEXANDER', 'ZARA_YAQOB', 195, 217),
+(8, 'GAME_4', 'QIN_SHI_HUANG', 'ZARA_YAQOB', 205, 234),
+(8, 'GAME_4', 'WASHINGTON', 'QIN_SHI_HUANG', 209, 240),
+(8, 'GAME_4', 'ALEXANDER', 'PERICLES', 223, 235),
+(8, 'GAME_4', 'ALEXANDER', 'WASHINGTON', 245, 271),
+(8, 'GAME_4', 'ZARA_YAQOB', 'ALEXANDER', 245, 272);
+
+
+-- Season 8: Game 5
+
+insert into game_participants (season_id, game_season_id, leader_id, turn_order_position, final_place, died_on_turn, killed_by_leader_id) values
+(8, 'GAME_5', 'PACAL', 1, 2, null, null),
+(8, 'GAME_5', 'DARIUS', 2, null, 265, 'BRENNUS'),
+(8, 'GAME_5', 'ASOKA', 3, 4, null, null),
+(8, 'GAME_5', 'BRENNUS', 4, 5, null, null),
+(8, 'GAME_5', 'HATSHEPSUT', 5, 3, null, null),
+(8, 'GAME_5', 'RAMESSES', 6, 1, null, null);
+
+insert into game_wars (season_id, game_season_id, declared_by_leader_id, target_leader_id, declaring_turn, ending_turn) values
+(8, 'GAME_5', 'HATSHEPSUT', 'ASOKA', 75, 109),
+(8, 'GAME_5', 'DARIUS', 'PACAL', 77, 102),
+(8, 'GAME_5', 'BRENNUS', 'HATSHEPSUT', 90, 231),
+(8, 'GAME_5', 'DARIUS', 'PACAL', 124, 139),
+(8, 'GAME_5', 'ASOKA', 'RAMESSES', 128, 150),
+(8, 'GAME_5', 'PACAL', 'DARIUS', 185, 212),
+(8, 'GAME_5', 'RAMESSES', 'PACAL', 185, 204),
+(8, 'GAME_5', 'ASOKA', 'RAMESSES', 195, 205),
+(8, 'GAME_5', 'PACAL', 'DARIUS', 234, 265),
+(8, 'GAME_5', 'BRENNUS', 'DARIUS', 234, 265),
+(8, 'GAME_5', 'HATSHEPSUT', 'PACAL', 234, 255),
+(8, 'GAME_5', 'BRENNUS', 'HATSHEPSUT', 282, 316),
+(8, 'GAME_5', 'PACAL', 'HATSHEPSUT', 308, 316),
+(8, 'GAME_5', 'ASOKA', 'BRENNUS', 311, 316);
+
+-- Season 8: Game 6
+
+insert into game_participants (season_id, game_season_id, leader_id, turn_order_position, final_place, died_on_turn, killed_by_leader_id) values
+ (8, 'GAME_6', 'STALIN', 1, null, 176, 'ROOSEVELT'),
+ (8, 'GAME_6', 'GANDHI', 2, 2, null, null),
+ (8, 'GAME_6', 'JOAO', 3, 3, null, null),
+ (8, 'GAME_6', 'NAPOLEON', 4, null, 133, 'GANDHI'),
+ (8, 'GAME_6', 'RAGNAR', 5, null, 257, 'ROOSEVELT'),
+ (8, 'GAME_6', 'ROOSEVELT', 6, null, 301, 'VICTORIA'),
+ (8, 'GAME_6', 'VICTORIA', 7, 1, null, null);
+
+insert into game_wars (season_id, game_season_id, declared_by_leader_id, target_leader_id, declaring_turn, ending_turn) values
+(8, 'GAME_6', 'STALIN', 'NAPOLEON', 52, 80),
+(8, 'GAME_6', 'STALIN', 'GANDHI', 97, 120),
+(8, 'GAME_6', 'NAPOLEON', 'GANDHI', 97, 133),
+(8, 'GAME_6', 'ROOSEVELT', 'NAPOLEON', 102, 133),
+(8, 'GAME_6', 'RAGNAR', 'JOAO', 119, 242),
+(8, 'GAME_6', 'STALIN', 'ROOSEVELT', 136, 176),
+(8, 'GAME_6', 'GANDHI', 'STALIN', 155, 176),
+(8, 'GAME_6', 'ROOSEVELT', 'RAGNAR', 178, 248),
+(8, 'GAME_6', 'VICTORIA', 'RAGNAR', 249, 257),
+(8, 'GAME_6', 'ROOSEVELT', 'RAGNAR', 249, 257),
+(8, 'GAME_6', 'ROOSEVELT', 'GANDHI', 294, 301),
+(8, 'GAME_6', 'VICTORIA', 'ROOSEVELT', 295, 301),
+(8, 'GAME_6', 'GANDHI', 'VICTORIA', 318, 321);
+
+
+-- Season 8: Game 7
+
+insert into game_participants (season_id, game_season_id, leader_id, turn_order_position, final_place, died_on_turn, killed_by_leader_id) values
+ (8, 'GAME_7', 'SURYAVARMAN', 1, 3, null, null),
+ (8, 'GAME_7', 'CHARLEMAGNE', 2, null, 128, null),
+ (8, 'GAME_7', 'ELIZABETH', 3, 1, null, null),
+ (8, 'GAME_7', 'ISABELLA', 4, null, 238, 'SURYAVARMAN'),
+ (8, 'GAME_7', 'MEHMED', 5, 2, null, null),
+ (8, 'GAME_7', 'MONTEZUMA', 6, null, 221, 'MEHMED');
+
+insert into game_wars (season_id, game_season_id, declared_by_leader_id, target_leader_id, declaring_turn, ending_turn) values
+(8, 'GAME_7', 'MONTEZUMA', 'CHARLEMAGNE', 87, 128),
+(8, 'GAME_7', 'SURYAVARMAN', 'ISABELLA', 91, 134),
+(8, 'GAME_7', 'MEHMED', 'CHARLEMAGNE', 103, 128),
+(8, 'GAME_7', 'MONTEZUMA', 'SURYAVARMAN', 129, 159),
+(8, 'GAME_7', 'ISABELLA', 'ELIZABETH', 150, 162),
+(8, 'GAME_7', 'MONTEZUMA', 'MEHMED', 161, 221),
+(8, 'GAME_7', 'ELIZABETH', 'ISABELLA', 194, 238),
+(8, 'GAME_7', 'SURYAVARMAN', 'ISABELLA', 222, 238),
+(8, 'GAME_7', 'MEHMED', 'ELIZABETH', 223, 234),
+(8, 'GAME_7', 'SURYAVARMAN', 'ELIZABETH', 254, 266),
+(8, 'GAME_7', 'MEHMED', 'ELIZABETH', 257, 313),
+(8, 'GAME_7', 'SURYAVARMAN', 'ELIZABETH', 301, 362),
+(8, 'GAME_7', 'MEHMED', 'ELIZABETH', 338, 362);
+
+
+-- Season 8: Game X
+
+-- insert into game_participants (season_id, game_season_id, leader_id, turn_order_position, final_place, died_on_turn, killed_by_leader_id) values
+--  (8, 'GAME_X', '', 1, null, null, null),
+--  (8, 'GAME_X', '', 2, null, null, null),
+--  (8, 'GAME_X', '', 3, null, null, null),
+--  (8, 'GAME_X', '', 4, null, null, null),
+--  (8, 'GAME_X', '', 5, null, null, null),
+--  (8, 'GAME_X', '', 6, null, null, null),
+--  (8, 'GAME_X', '', 7, null, null, null);
+--
+-- insert into game_wars (season_id, game_season_id, declared_by_leader_id, target_leader_id, declaring_turn, ending_turn) values
+-- (8, 'GAME_X', '', '', null, null),
