@@ -144,6 +144,10 @@
                                                 <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                             <tr>
+                                                <td title="leader_pools.[leader_id, season_id] references seasons.[leader_id, season_id] via "><a href='leader_pools.html'>leader_pools</a><span class='relatedKey'>.leader_id</span></td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
                                                 <td title="leader_traits.[leader_id, trait_id] references traits.[leader_id, trait_id] via "><a href='leader_traits.html'>leader_traits</a><span class='relatedKey'>.leader_id</span></td>
                                                 <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
@@ -234,46 +238,51 @@
                                     <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
 <area shape="rect" id="node1" href="civilization_leaders.html" target="_top" title="civilization_leaders" alt="" coords="389,5,637,128">
-<area shape="rect" id="node2" href="leaders.html" target="_top" title="leaders" alt="" coords="5,88,345,216">
-<area shape="rect" id="node3" href="leader_traits.html" target="_top" title="leader_traits" alt="" coords="416,145,611,268">
+<area shape="rect" id="node2" href="leaders.html" target="_top" title="leaders" alt="" coords="5,172,345,300">
+<area shape="rect" id="node3" href="leader_pools.html" target="_top" title="leader_pools" alt="" coords="417,145,610,292">
+<area shape="rect" id="node4" href="leader_traits.html" target="_top" title="leader_traits" alt="" coords="416,309,611,432">
 </map>
                                         <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/leaders.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
                                     </div>
                                     <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
-<area shape="rect" id="node1" href="civilization_leaders.html" target="_top" title="civilization_leaders" alt="" coords="389,24,637,147">
+<area shape="rect" id="node1" href="civilization_leaders.html" target="_top" title="civilization_leaders" alt="" coords="389,7,637,129">
 <area shape="rect" id="node2" href="civilizations.html" target="_top" title="civilizations" alt="" coords="81,5,270,93">
-<area shape="rect" id="node3" href="leaders.html" target="_top" title="leaders" alt="" coords="5,111,345,239">
-<area shape="rect" id="node4" href="leader_traits.html" target="_top" title="leader_traits" alt="" coords="416,184,611,307">
-<area shape="rect" id="node5" href="traits.html" target="_top" title="traits" alt="" coords="105,256,246,344">
+<area shape="rect" id="node3" href="leaders.html" target="_top" title="leaders" alt="" coords="5,216,345,344">
+<area shape="rect" id="node4" href="leader_pools.html" target="_top" title="leader_pools" alt="" coords="417,149,610,296">
+<area shape="rect" id="node5" href="seasons.html" target="_top" title="seasons" alt="" coords="97,111,254,199">
+<area shape="rect" id="node6" href="leader_traits.html" target="_top" title="leader_traits" alt="" coords="416,319,611,441">
+<area shape="rect" id="node7" href="traits.html" target="_top" title="traits" alt="" coords="105,361,246,449">
 </map>
                                         <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/leaders.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
                                     </div>
                                     <div class="chart tab-pane " id="oneimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="oneDegreeRelationshipsDiagramImplied" name="oneDegreeRelationshipsDiagramImplied">
 <area shape="rect" id="node1" href="civilization_leaders.html" target="_top" title="civilization_leaders" alt="" coords="422,5,670,128">
-<area shape="rect" id="node2" href="leaders.html" target="_top" title="leaders" alt="" coords="5,355,345,483">
+<area shape="rect" id="node2" href="leaders.html" target="_top" title="leaders" alt="" coords="5,403,345,531">
 <area shape="rect" id="node3" href="game.html" target="_top" title="game" alt="" coords="389,181,703,475">
 <area shape="rect" id="node4" href="game_participants.html" target="_top" title="game_participants" alt="" coords="749,180,991,415">
 <area shape="rect" id="node5" href="game_wars.html" target="_top" title="game_wars" alt="" coords="747,432,993,672">
-<area shape="rect" id="node6" href="leader_traits.html" target="_top" title="leader_traits" alt="" coords="449,600,643,723">
+<area shape="rect" id="node6" href="leader_pools.html" target="_top" title="leader_pools" alt="" coords="449,600,643,747">
+<area shape="rect" id="node7" href="leader_traits.html" target="_top" title="leader_traits" alt="" coords="449,764,643,887">
 </map>
                                         <a name='diagram'><img id="oneimpliedDegreeImg" src="../diagrams/tables/leaders.implied1degrees.png" usemap="#oneDegreeRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
                                     </div>
                                     <div class="chart tab-pane " id="twoimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="twoDegreesRelationshipsDiagramImplied" name="twoDegreesRelationshipsDiagramImplied">
-<area shape="rect" id="node1" href="civilization_leaders.html" target="_top" title="civilization_leaders" alt="" coords="422,17,670,140">
-<area shape="rect" id="node2" href="civilizations.html" target="_top" title="civilizations" alt="" coords="81,5,270,93">
-<area shape="rect" id="node3" href="leaders.html" target="_top" title="leaders" alt="" coords="5,439,345,567">
-<area shape="rect" id="node4" href="game.html" target="_top" title="game" alt="" coords="389,171,703,464">
-<area shape="rect" id="node5" href="game_type.html" target="_top" title="game_type" alt="" coords="86,216,265,304">
-<area shape="rect" id="node6" href="seasons.html" target="_top" title="seasons" alt="" coords="97,111,254,199">
-<area shape="rect" id="node7" href="turn_years.html" target="_top" title="turn_years" alt="" coords="87,764,264,852">
-<area shape="rect" id="node8" href="game_victory_type.html" target="_top" title="game_victory_type" alt="" coords="53,321,297,409">
-<area shape="rect" id="node9" href="game_participants.html" target="_top" title="game_participants" alt="" coords="749,239,991,473">
-<area shape="rect" id="node10" href="game_wars.html" target="_top" title="game_wars" alt="" coords="747,491,993,731">
-<area shape="rect" id="node11" href="leader_traits.html" target="_top" title="leader_traits" alt="" coords="449,625,643,748">
-<area shape="rect" id="node12" href="traits.html" target="_top" title="traits" alt="" coords="105,657,246,745">
+<area shape="rect" id="node1" href="civilization_leaders.html" target="_top" title="civilization_leaders" alt="" coords="422,5,670,128">
+<area shape="rect" id="node2" href="civilizations.html" target="_top" title="civilizations" alt="" coords="81,8,270,96">
+<area shape="rect" id="node3" href="leaders.html" target="_top" title="leaders" alt="" coords="5,533,345,661">
+<area shape="rect" id="node4" href="game.html" target="_top" title="game" alt="" coords="389,309,703,603">
+<area shape="rect" id="node5" href="game_type.html" target="_top" title="game_type" alt="" coords="86,304,265,392">
+<area shape="rect" id="node6" href="seasons.html" target="_top" title="seasons" alt="" coords="97,173,254,261">
+<area shape="rect" id="node7" href="turn_years.html" target="_top" title="turn_years" alt="" coords="87,716,264,804">
+<area shape="rect" id="node8" href="game_victory_type.html" target="_top" title="game_victory_type" alt="" coords="53,409,297,497">
+<area shape="rect" id="node9" href="game_participants.html" target="_top" title="game_participants" alt="" coords="749,384,991,619">
+<area shape="rect" id="node10" href="game_wars.html" target="_top" title="game_wars" alt="" coords="747,636,993,876">
+<area shape="rect" id="node11" href="leader_pools.html" target="_top" title="leader_pools" alt="" coords="449,145,643,292">
+<area shape="rect" id="node12" href="leader_traits.html" target="_top" title="leader_traits" alt="" coords="449,800,643,923">
+<area shape="rect" id="node13" href="traits.html" target="_top" title="traits" alt="" coords="105,832,246,920">
 </map>
                                         <a name='diagram'><img id="twoimpliedDegreeImg" src="../diagrams/tables/leaders.implied2degrees.png" usemap="#twoDegreesRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
                                     </div>
