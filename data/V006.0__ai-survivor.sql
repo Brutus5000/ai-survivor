@@ -69,9 +69,15 @@ create table game
     victory_type                    text
         constraint game_game_victory_type_fk
             references game_victory_type,
-    winner_leader_id                text,
-    second_leader_id                text,
-    died_first_leader_id            text,
+    winner_leader_id                text
+        constraint game_leaders_winner_leader_id_fk
+            references leaders,
+    second_leader_id                text
+        constraint game_leaders_second_leader_id_fk
+            references leaders,
+    died_first_leader_id            text
+        constraint game_leaders_died_first_leader_id_fk
+            references leaders,
     writeup_url                     text,
     video_url                       text,
     alternate_history_writeup_url   text,
@@ -82,13 +88,17 @@ create table game_participants
 (
     season_id           integer not null,
     game_season_id      text not null,
-    leader_id           text not null,
+    leader_id           text not null
+        constraint game_participants_leaders_leader_id_fk
+            references leaders,
     turn_order_position integer,
     final_place         integer,
     died_on_turn        integer
-        constraint game_participants_turn_years_turn_fk
+        constraint game_participants_turn_years_died_on_turn_fk
             references turn_years,
-    killed_by_leader_id text,
+    killed_by_leader_id text
+        constraint game_participants_leaders_killed_by_leader_id_fk
+            references leaders,
     constraint game_participants_game_fk
         foreign key (season_id, game_season_id) references game (season_id, game_season_id)
 );
@@ -97,10 +107,18 @@ create table game_wars
 (
     season_id               integer not null,
     game_season_id          text not null,
-    declared_by_leader_id   text not null,
-    target_leader_id        text not null,
-    declaring_turn          integer not null,
-    ending_turn             integer,
+    declared_by_leader_id   text not null
+        constraint game_wars_leaders_declared_by_leader_id_fk
+            references leaders,
+    target_leader_id        text not null
+        constraint game_wars_leaders_target_leader_id_fk
+            references leaders,
+    declaring_turn          integer not null
+        constraint game_wars_turn_years_declaring_turn_fk
+            references turn_years,
+    ending_turn             integer
+        constraint game_wars_turn_years_declaring_turn_fk
+            references turn_years,
     constraint game_wars_game_fk
         foreign key (season_id, game_season_id) references game (season_id, game_season_id)
 );
