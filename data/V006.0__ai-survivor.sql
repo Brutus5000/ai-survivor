@@ -58,7 +58,7 @@ create table game
             references turn_years,
     victory_type                    text
         constraint game_game_victory_type_fk
-            references game_victory_type_id,
+            references game_victory_type,
     winner_leader_id                text,
     second_leader_id                text,
     died_first_leader_id            text,
