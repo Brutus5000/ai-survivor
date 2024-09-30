@@ -66,3 +66,50 @@ insert into game_wars (season_id, game_season_id, declared_by_leader_id, target_
 
 
 -- Season 8: Game 2
+
+insert into game_participants (season_id, game_season_id, leader_id, turn_order_position, final_place, died_on_turn, killed_by_leader_id) values
+(8, 'GAME_2', 'JUSTINIAN', 1, 1, null, null),
+(8, 'GAME_2', 'GILGAMESH', 2, 2, null, null),
+(8, 'GAME_2', 'BISMARCK', 3, null, 316, 'JUSTINIAN'),
+(8, 'GAME_2', 'CATHERINE', 4, 3, null, null),
+(8, 'GAME_2', 'GENGHIS_KHAN', 5, null, 264, 'BISMARCK'),
+(8, 'GAME_2', 'TOKUGAWA', 6, null, 172, 'GENGHIS_KHAN'),
+(8, 'GAME_2', 'WANGKON', 7, null, 296, 'GILGAMESH');
+
+insert into game_wars (season_id, game_season_id, declared_by_leader_id, target_leader_id, declaring_turn, ending_turn) values
+(8, 'GAME_2', 'GENGHIS_KHAN', 'GILGAMESH', 62, 96),
+(8, 'GAME_2', 'WANGKON', 'GILGAMESH', 84, 141),
+(8, 'GAME_2', 'BISMARCK', 'JUSTINIAN', 103, 121),
+(8, 'GAME_2', 'GENGHIS_KHAN', 'WANGKON', 104, 134),
+(8, 'GAME_2', 'TOKUGAWA', 'BISMARCK', 122, 133),
+(8, 'GAME_2', 'JUSTINIAN', 'TOKUGAWA', 135, 151),
+(8, 'GAME_2', 'GENGHIS_KHAN', 'TOKUGAWA', 143, 172),
+(8, 'GAME_2', 'WANGKON', 'TOKUGAWA', 1030, 172),
+(8, 'GAME_2', 'GENGHIS_KHAN', 'CATHERINE', 178, 264),
+(8, 'GAME_2', 'BISMARCK', 'GENGHIS_KHAN', 220, 264),
+(8, 'GAME_2', 'GILGAMESH', 'WANGKON', 243, 296),
+(8, 'GAME_2', 'BISMARCK', 'JUSTINIAN', 276, 316),
+(8, 'GAME_2', 'CATHERINE', 'WANGKON', 278, 296);
+
+
+-- Season 8: Game 3
+
+insert into game_participants (season_id, game_season_id, leader_id, turn_order_position, final_place, died_on_turn, killed_by_leader_id) values
+(8, 'GAME_3', 'HUAYNA_CAPAC', 1, null, 240, 'SITTING_BULL'),
+(8, 'GAME_3', 'HANNIBAL', 2, null, 237, 'FREDERICK'),
+(8, 'GAME_3', 'FREDERICK', 3, 2, null, null),
+(8, 'GAME_3', 'SHAKA', 4, null, 210, 'FREDERICK'),
+(8, 'GAME_3', 'SITTING_BULL', 5, 1, null, null),
+(8, 'GAME_3', 'WILLEM_VAN_ORANJE', 6, 3, null, null);
+
+insert into game_wars (season_id, game_season_id, declared_by_leader_id, target_leader_id, declaring_turn, ending_turn) values
+(8, 'GAME_3', 'WILLEM_VAN_ORANJE', 'HUAYNA_CAPAC', 69, 94),
+(8, 'GAME_3', 'SITTING_BULL', 'HUAYNA_CAPAC', 71, 240),
+(8, 'GAME_3', 'SHAKA', 'WILLEM_VAN_ORANJE', 87, 154),
+(8, 'GAME_3', 'HANNIBAL', 'SITTING_BULL', 92, 109),
+(8, 'GAME_3', 'FREDERICK', 'SHAKA', 144, 210),
+(8, 'GAME_3', 'WILLEM_VAN_ORANJE', 'SITTING_BULL', 179, 215),
+(8, 'GAME_3', 'FREDERICK', 'HANNIBAL', 228, 237),
+(8, 'GAME_3', 'SITTING_BULL', 'WILLEM_VAN_ORANJE', 286, 339);
+-- the War Declaration Counter of the live stream counts 9, but I can only find 8
+
