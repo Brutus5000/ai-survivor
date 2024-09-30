@@ -11,11 +11,11 @@ create table seasons
 insert into seasons (season_id, year, storybook_url, video_playlist_url)  values
     (1, 2014, 'https://www.sullla.com/civ4survivor.html', null),
     (2, 2015, 'https://www.sullla.com/civ4survivor2.html', null),
-    (3, 2017, 'https://www.sullla.com/civ4survivor3.html', null),
-    (4, 2019, 'https://www.sullla.com/civ4survivor4.html', null),
-    (5, 2020, 'https://www.sullla.com/civ4survivor5.html', null),
-    (6, 2021, 'https://www.sullla.com/civ4survivor6.html', null),
-    (7, 2023, 'https://www.sullla.com/civ4survivor7.html', null);
+    (3, 2017, 'https://www.sullla.com/Civ4/civ4survivor3.html', null),
+    (4, 2019, 'https://www.sullla.com/Civ4/civ4survivor4.html', null),
+    (5, 2020, 'https://www.sullla.com/Civ4/civ4survivor5.html', null),
+    (6, 2021, 'https://www.sullla.com/Civ4/civ4survivor6.html', null),
+    (7, 2023, 'https://www.sullla.com/Civ4/civ4survivor7.html', null);
 
 create table leader_pools
 (

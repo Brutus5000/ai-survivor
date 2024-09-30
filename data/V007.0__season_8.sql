@@ -1,5 +1,5 @@
 insert into seasons (season_id, year, storybook_url, video_playlist_url)  values
-    (8, 2024, 'https://www.sullla.com/civ4survivor8.html', null);
+    (8, 2024, 'https://www.sullla.com/Civ4/civ4survivor8.html', null);
 
 insert into leader_pools (season_id, leader_id, pool) values
 (8, 'HUAYNA_CAPAC', 1),
@@ -63,3 +63,6 @@ insert into game_wars (season_id, game_season_id, declared_by_leader_id, target_
 (8, 'GAME_1', 'CHURCHILL', 'KUBLAI_KHAN', 301, 369),
 (8, 'GAME_1', 'PETER', 'HAMMURABI', 311, 332),
 (8, 'GAME_1', 'PETER', 'HAMMURABI', 360, 380);
+
+
+-- Season 8: Game 2
