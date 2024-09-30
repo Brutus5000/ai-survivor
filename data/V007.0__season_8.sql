@@ -217,6 +217,49 @@ insert into game_wars (season_id, game_season_id, declared_by_leader_id, target_
 (8, 'GAME_7', 'MEHMED', 'ELIZABETH', 338, 362);
 
 
+-- Season 8: Game 8
+
+insert into game_participants (season_id, game_season_id, leader_id, turn_order_position, final_place, died_on_turn, killed_by_leader_id) values
+ (8, 'GAME_8', 'JULIUS_CAESAR', 1, null, 211, 'CYRUS'),
+ (8, 'GAME_8', 'LOUIS_XIV', 2, null, 158, 'LINCOLN'),
+ (8, 'GAME_8', 'AUGUSTUS', 3, 1, null, null),
+ (8, 'GAME_8', 'CYRUS', 4, 4 , null, null),
+ (8, 'GAME_8', 'DE_GAULLE', 5, 3, null, null),
+ (8, 'GAME_8', 'LINCOLN', 6, 2, null, null),
+ (8, 'GAME_8', 'SULEIMAN', 7, null, 207, 'DE_GAULLE');
+
+insert into game_wars (season_id, game_season_id, declared_by_leader_id, target_leader_id, declaring_turn, ending_turn) values
+(8, 'GAME_8', 'CYRUS', 'JULIUS_CAESAR', 72, 108),
+(8, 'GAME_8', 'LOUIS_XIV', 'LINCOLN', 74 , 86),
+(8, 'GAME_8', 'SULEIMAN', 'DE_GAULLE', 90, 207),
+(8, 'GAME_8', 'LOUIS_XIV', 'AUGUSTUS', 101  , 158),
+(8, 'GAME_8', 'LINCOLN', 'LOUIS_XIV', 119 , 158),
+(8, 'GAME_8', 'JULIUS_CAESAR', 'CYRUS', 130, 211),
+(8, 'GAME_8', 'LINCOLN', 'DE_GAULLE', 222 , 252),
+(8, 'GAME_8', 'CYRUS', 'AUGUSTUS', 254, 295);
+
+
+-- Season 8: Wildcard Game 1
+
+insert into game_participants (season_id, game_season_id, leader_id, turn_order_position, final_place, died_on_turn, killed_by_leader_id) values
+ (8, 'WILDCARD_GAME_1', 'ASOKA', 1, null, 222, 'JOAO'),
+ (8, 'WILDCARD_GAME_1', 'CATHERINE', 2, null, 164, 'ZARA_YAQOB'),
+ (8, 'WILDCARD_GAME_1', 'HATSHEPSUT', 3, null, 304, 'ZARA_YAQOB'),
+ (8, 'WILDCARD_GAME_1', 'JOAO', 4, 3, null, null),
+ (8, 'WILDCARD_GAME_1', 'PERICLES', 5, 1, null, null),
+ (8, 'WILDCARD_GAME_1', 'ZARA_YAQOB', 6, 2, null, null);
+
+insert into game_wars (season_id, game_season_id, declared_by_leader_id, target_leader_id, declaring_turn, ending_turn) values
+(8, 'WILDCARD_GAME_1', 'ASOKA', 'CATHERINE', 108, 161),
+(8, 'WILDCARD_GAME_1', 'PERICLES', 'CATHERINE', 123, 164),
+(8, 'WILDCARD_GAME_1', 'JOAO', 'ASOKA', 132, 222),
+(8, 'WILDCARD_GAME_1', 'ZARA_YAQOB ', 'CATHERINE', 142, 164),
+(8, 'WILDCARD_GAME_1', 'HATSHEPSUT', 'CATHERINE', 148, 164),
+(8, 'WILDCARD_GAME_1', 'ZARA_YAQOB', 'HATSHEPSUT', 208, 257),
+(8, 'WILDCARD_GAME_1', 'HATSHEPSUT', 'JOAO', 275, 304),
+(8, 'WILDCARD_GAME_1', 'ZARA_YAQOB ', 'HATSHEPSUT', 284, 304);
+
+
 -- Season 8: Game X
 
 -- insert into game_participants (season_id, game_season_id, leader_id, turn_order_position, final_place, died_on_turn, killed_by_leader_id) values
