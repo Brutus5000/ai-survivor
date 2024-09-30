@@ -73,7 +73,7 @@
             <div class="content-wrapper">
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
-                    <h1>game</h1><p><span id="recordNumber">0</span> rows</p><br />
+                    <h1>game</h1><p><span id="recordNumber">14</span> rows</p><br />
                 </section>
                 <!-- Main content -->
                 <section class="content">
@@ -124,7 +124,7 @@
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                             <tr>
-                                                <td title="game.[game_type_id, season_id, victory_turn] references turn_years.[game_type_id, season_id, turn] via "><a href='seasons.html'>seasons</a><span class='relatedKey'>.season_id</span></td>
+                                                <td title="game.[game_type_id, victory_type, season_id, victory_turn] references turn_years.[game_type_id, game_victory_type_id, season_id, turn] via "><a href='seasons.html'>seasons</a><span class='relatedKey'>.season_id</span></td>
                                                 <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                         </table>
@@ -170,7 +170,7 @@
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                             <tr>
-                                                <td title="game.[game_type_id, season_id, victory_turn] references turn_years.[game_type_id, season_id, turn] via "><a href='game_type.html'>game_type</a><span class='relatedKey'>.game_type_id</span></td>
+                                                <td title="game.[game_type_id, victory_type, season_id, victory_turn] references turn_years.[game_type_id, game_victory_type_id, season_id, turn] via "><a href='game_type.html'>game_type</a><span class='relatedKey'>.game_type_id</span></td>
                                                 <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                         </table>
@@ -191,7 +191,7 @@
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                             <tr>
-                                                <td title="game.[game_type_id, season_id, victory_turn] references turn_years.[game_type_id, season_id, turn] via "><a href='turn_years.html'>turn_years</a><span class='relatedKey'>.turn</span></td>
+                                                <td title="game.[game_type_id, victory_type, season_id, victory_turn] references turn_years.[game_type_id, game_victory_type_id, season_id, turn] via "><a href='turn_years.html'>turn_years</a><span class='relatedKey'>.turn</span></td>
                                                 <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                         </table>
@@ -199,7 +199,7 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td><span id="victory_type">victory_type</span></td>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="victory_type">victory_type</span></td>
                                     <td>TEXT</td>
                                     <td>2000000000</td>
                                     <td title='nullable'>√</td>
@@ -211,6 +211,10 @@
                                     </td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="game.[game_type_id, victory_type, season_id, victory_turn] references turn_years.[game_type_id, game_victory_type_id, season_id, turn] via "><a href='game_victory_type.html'>game_victory_type</a><span class='relatedKey'>.game_victory_type_id</span></td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td></td>
@@ -370,38 +374,41 @@
                                 <div class="tab-content no-padding">
                                     <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
-<area shape="rect" id="node1" href="game.html" target="_top" title="game" alt="" coords="255,40,736,461">
-<area shape="rect" id="node2" href="game_type.html" target="_top" title="game_type" alt="" coords="19,140,197,257">
-<area shape="rect" id="node3" href="seasons.html" target="_top" title="seasons" alt="" coords="5,5,211,123">
-<area shape="rect" id="node4" href="turn_years.html" target="_top" title="turn_years" alt="" coords="19,357,197,480">
-<area shape="rect" id="node5" href="game_participants.html" target="_top" title="game_participants" alt="" coords="783,300,1024,535">
-<area shape="rect" id="node6" href="game_wars.html" target="_top" title="game_wars" alt="" coords="780,43,1027,283">
+<area shape="rect" id="node1" href="game.html" target="_top" title="game" alt="" coords="293,79,775,500">
+<area shape="rect" id="node2" href="game_type.html" target="_top" title="game_type" alt="" coords="38,140,217,257">
+<area shape="rect" id="node3" href="seasons.html" target="_top" title="seasons" alt="" coords="25,5,230,123">
+<area shape="rect" id="node4" href="turn_years.html" target="_top" title="turn_years" alt="" coords="39,431,216,553">
+<area shape="rect" id="node5" href="game_victory_type.html" target="_top" title="game_victory_type" alt="" coords="5,275,249,368">
+<area shape="rect" id="node6" href="game_participants.html" target="_top" title="game_participants" alt="" coords="821,339,1063,573">
+<area shape="rect" id="node7" href="game_wars.html" target="_top" title="game_wars" alt="" coords="819,81,1065,321">
 </map>
                                         <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/game.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
                                     </div>
                                     <div class="chart tab-pane " id="oneimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="oneDegreeRelationshipsDiagramImplied" name="oneDegreeRelationshipsDiagramImplied">
-<area shape="rect" id="node1" href="game.html" target="_top" title="game" alt="" coords="255,40,736,461">
-<area shape="rect" id="node2" href="leaders.html" target="_top" title="leaders" alt="" coords="22,439,194,556">
-<area shape="rect" id="node3" href="game_type.html" target="_top" title="game_type" alt="" coords="19,140,197,257">
-<area shape="rect" id="node4" href="seasons.html" target="_top" title="seasons" alt="" coords="5,5,211,123">
-<area shape="rect" id="node5" href="turn_years.html" target="_top" title="turn_years" alt="" coords="19,596,197,719">
-<area shape="rect" id="node6" href="game_participants.html" target="_top" title="game_participants" alt="" coords="783,243,1024,477">
-<area shape="rect" id="node7" href="game_wars.html" target="_top" title="game_wars" alt="" coords="780,495,1027,735">
+<area shape="rect" id="node1" href="game.html" target="_top" title="game" alt="" coords="293,79,775,500">
+<area shape="rect" id="node2" href="leaders.html" target="_top" title="leaders" alt="" coords="41,477,213,595">
+<area shape="rect" id="node3" href="game_type.html" target="_top" title="game_type" alt="" coords="38,140,217,257">
+<area shape="rect" id="node4" href="seasons.html" target="_top" title="seasons" alt="" coords="25,5,230,123">
+<area shape="rect" id="node5" href="turn_years.html" target="_top" title="turn_years" alt="" coords="39,635,216,757">
+<area shape="rect" id="node6" href="game_victory_type.html" target="_top" title="game_victory_type" alt="" coords="5,275,249,368">
+<area shape="rect" id="node7" href="game_participants.html" target="_top" title="game_participants" alt="" coords="821,281,1063,516">
+<area shape="rect" id="node8" href="game_wars.html" target="_top" title="game_wars" alt="" coords="819,533,1065,773">
 </map>
                                         <a name='diagram'><img id="oneimpliedDegreeImg" src="../diagrams/tables/game.implied1degrees.png" usemap="#oneDegreeRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
                                     </div>
                                     <div class="chart tab-pane " id="twoimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="twoDegreesRelationshipsDiagramImplied" name="twoDegreesRelationshipsDiagramImplied">
-<area shape="rect" id="node1" href="civilization_leaders.html" target="_top" title="civilization_leaders" alt="" coords="371,479,619,567">
-<area shape="rect" id="node2" href="leaders.html" target="_top" title="leaders" alt="" coords="22,544,194,661">
-<area shape="rect" id="node3" href="game.html" target="_top" title="game" alt="" coords="255,40,736,461">
-<area shape="rect" id="node4" href="game_type.html" target="_top" title="game_type" alt="" coords="19,140,197,257">
-<area shape="rect" id="node5" href="seasons.html" target="_top" title="seasons" alt="" coords="5,5,211,123">
-<area shape="rect" id="node6" href="turn_years.html" target="_top" title="turn_years" alt="" coords="19,812,197,935">
-<area shape="rect" id="node7" href="game_participants.html" target="_top" title="game_participants" alt="" coords="783,312,1024,547">
-<area shape="rect" id="node8" href="game_wars.html" target="_top" title="game_wars" alt="" coords="780,564,1027,804">
-<area shape="rect" id="node9" href="leader_traits.html" target="_top" title="leader_traits" alt="" coords="398,728,593,816">
+<area shape="rect" id="node1" href="civilization_leaders.html" target="_top" title="civilization_leaders" alt="" coords="410,517,658,605">
+<area shape="rect" id="node2" href="leaders.html" target="_top" title="leaders" alt="" coords="41,583,213,700">
+<area shape="rect" id="node3" href="game.html" target="_top" title="game" alt="" coords="293,79,775,500">
+<area shape="rect" id="node4" href="game_type.html" target="_top" title="game_type" alt="" coords="38,140,217,257">
+<area shape="rect" id="node5" href="seasons.html" target="_top" title="seasons" alt="" coords="25,5,230,123">
+<area shape="rect" id="node6" href="turn_years.html" target="_top" title="turn_years" alt="" coords="39,851,216,973">
+<area shape="rect" id="node7" href="game_victory_type.html" target="_top" title="game_victory_type" alt="" coords="5,275,249,368">
+<area shape="rect" id="node8" href="game_participants.html" target="_top" title="game_participants" alt="" coords="821,351,1063,585">
+<area shape="rect" id="node9" href="game_wars.html" target="_top" title="game_wars" alt="" coords="819,603,1065,843">
+<area shape="rect" id="node10" href="leader_traits.html" target="_top" title="leader_traits" alt="" coords="437,767,631,855">
 </map>
                                         <a name='diagram'><img id="twoimpliedDegreeImg" src="../diagrams/tables/game.implied2degrees.png" usemap="#twoDegreesRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
                                     </div>

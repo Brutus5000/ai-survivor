@@ -44,7 +44,7 @@
             <column ascending="true" name="installed_rank"/>
          </index>
       </table>
-      <table name="game" numRows="0" remarks="" type="TABLE">
+      <table name="game" numRows="14" remarks="" type="TABLE">
          <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="season_id" nullable="false" remarks="" size="2000000000" type="INTEGER" typeCode="4">
             <child column="season_id" foreignKey="game_participants_game_fk" implied="false" onDeleteCascade="false" table="game_participants"/>
             <child column="season_id" foreignKey="game_wars_game_fk" implied="false" onDeleteCascade="false" table="game_wars"/>
@@ -60,7 +60,9 @@
          <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="victory_turn" nullable="true" remarks="" size="2000000000" type="INTEGER" typeCode="4">
             <parent column="turn" foreignKey="" implied="false" onDeleteCascade="false" table="turn_years"/>
          </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="victory_type" nullable="true" remarks="" size="2000000000" type="TEXT" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="victory_type" nullable="true" remarks="" size="2000000000" type="TEXT" typeCode="12">
+            <parent column="game_victory_type_id" foreignKey="" implied="false" onDeleteCascade="false" table="game_victory_type"/>
+         </column>
          <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="winner_leader_id" nullable="true" remarks="" size="2000000000" type="TEXT" typeCode="12">
             <parent column="leader_id" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="leaders"/>
          </column>
@@ -104,6 +106,18 @@
          </index>
          <index name="sqlite_autoindex_game_type_1" unique="true">
             <column ascending="true" name="game_type_id"/>
+         </index>
+      </table>
+      <table name="game_victory_type" numRows="4" remarks="" type="TABLE">
+         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="game_victory_type_id" nullable="false" remarks="" size="2000000000" type="TEXT" typeCode="12">
+            <child column="victory_type" foreignKey="" implied="false" onDeleteCascade="false" table="game"/>
+         </column>
+         <primaryKey column="game_victory_type_id" sequenceNumberInPK="1"/>
+         <index name="game_victory_type_s_pk" unique="true">
+            <column ascending="true" name="game_victory_type_id"/>
+         </index>
+         <index name="sqlite_autoindex_game_victory_type_1" unique="true">
+            <column ascending="true" name="game_victory_type_id"/>
          </index>
       </table>
       <table name="game_wars" numRows="0" remarks="" type="TABLE">

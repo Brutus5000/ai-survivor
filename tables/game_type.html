@@ -112,7 +112,7 @@
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                             <tr>
-                                                <td title="game.[game_type_id, season_id, victory_turn] references turn_years.[game_type_id, season_id, turn] via "><a href='game.html'>game</a><span class='relatedKey'>.game_type_id</span></td>
+                                                <td title="game.[game_type_id, victory_type, season_id, victory_turn] references turn_years.[game_type_id, game_victory_type_id, season_id, turn] via "><a href='game.html'>game</a><span class='relatedKey'>.game_type_id</span></td>
                                                 <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                         </table>
@@ -201,38 +201,40 @@
                                 <div class="tab-content no-padding">
                                     <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
-<area shape="rect" id="node1" href="game.html" target="_top" title="game" alt="" coords="389,5,703,269">
+<area shape="rect" id="node1" href="game.html" target="_top" title="game" alt="" coords="389,5,703,299">
 <area shape="rect" id="node2" href="game_type.html" target="_top" title="game_type" alt="" coords="5,32,345,160">
 </map>
                                         <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/game_type.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
                                     </div>
                                     <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
-<area shape="rect" id="node1" href="game.html" target="_top" title="game" alt="" coords="389,65,703,329">
+<area shape="rect" id="node1" href="game.html" target="_top" title="game" alt="" coords="389,88,703,381">
 <area shape="rect" id="node2" href="game_type.html" target="_top" title="game_type" alt="" coords="5,111,345,239">
 <area shape="rect" id="node3" href="seasons.html" target="_top" title="seasons" alt="" coords="97,5,254,93">
-<area shape="rect" id="node4" href="turn_years.html" target="_top" title="turn_years" alt="" coords="87,273,264,361">
-<area shape="rect" id="node5" href="game_participants.html" target="_top" title="game_participants" alt="" coords="747,173,988,261">
-<area shape="rect" id="node6" href="game_wars.html" target="_top" title="game_wars" alt="" coords="776,68,959,156">
+<area shape="rect" id="node4" href="turn_years.html" target="_top" title="turn_years" alt="" coords="87,361,264,449">
+<area shape="rect" id="node5" href="game_victory_type.html" target="_top" title="game_victory_type" alt="" coords="53,256,297,344">
+<area shape="rect" id="node6" href="game_participants.html" target="_top" title="game_participants" alt="" coords="747,196,988,284">
+<area shape="rect" id="node7" href="game_wars.html" target="_top" title="game_wars" alt="" coords="776,91,959,179">
 </map>
                                         <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/game_type.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
                                     </div>
                                     <div class="chart tab-pane " id="oneimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="oneDegreeRelationshipsDiagramImplied" name="oneDegreeRelationshipsDiagramImplied">
-<area shape="rect" id="node1" href="game.html" target="_top" title="game" alt="" coords="389,5,703,269">
+<area shape="rect" id="node1" href="game.html" target="_top" title="game" alt="" coords="389,5,703,299">
 <area shape="rect" id="node2" href="game_type.html" target="_top" title="game_type" alt="" coords="5,32,345,160">
 </map>
                                         <a name='diagram'><img id="oneimpliedDegreeImg" src="../diagrams/tables/game_type.implied1degrees.png" usemap="#oneDegreeRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
                                     </div>
                                     <div class="chart tab-pane " id="twoimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="twoDegreesRelationshipsDiagramImplied" name="twoDegreesRelationshipsDiagramImplied">
-<area shape="rect" id="node1" href="game.html" target="_top" title="game" alt="" coords="389,119,703,383">
-<area shape="rect" id="node2" href="leaders.html" target="_top" title="leaders" alt="" coords="100,371,251,459">
-<area shape="rect" id="node3" href="game_type.html" target="_top" title="game_type" alt="" coords="5,219,345,347">
-<area shape="rect" id="node4" href="seasons.html" target="_top" title="seasons" alt="" coords="97,113,254,201">
+<area shape="rect" id="node1" href="game.html" target="_top" title="game" alt="" coords="389,159,703,452">
+<area shape="rect" id="node2" href="leaders.html" target="_top" title="leaders" alt="" coords="100,467,251,555">
+<area shape="rect" id="node3" href="game_type.html" target="_top" title="game_type" alt="" coords="5,216,345,344">
+<area shape="rect" id="node4" href="seasons.html" target="_top" title="seasons" alt="" coords="97,111,254,199">
 <area shape="rect" id="node5" href="turn_years.html" target="_top" title="turn_years" alt="" coords="87,5,264,93">
-<area shape="rect" id="node6" href="game_participants.html" target="_top" title="game_participants" alt="" coords="747,227,988,315">
-<area shape="rect" id="node7" href="game_wars.html" target="_top" title="game_wars" alt="" coords="776,121,959,209">
+<area shape="rect" id="node6" href="game_victory_type.html" target="_top" title="game_victory_type" alt="" coords="53,361,297,449">
+<area shape="rect" id="node7" href="game_participants.html" target="_top" title="game_participants" alt="" coords="747,267,988,355">
+<area shape="rect" id="node8" href="game_wars.html" target="_top" title="game_wars" alt="" coords="776,161,959,249">
 </map>
                                         <a name='diagram'><img id="twoimpliedDegreeImg" src="../diagrams/tables/game_type.implied2degrees.png" usemap="#twoDegreesRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
                                     </div>

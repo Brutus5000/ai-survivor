@@ -8,6 +8,7 @@ game
 traits
 technologies
 seasons
+game_victory_type
 game_type
 civilizations
 turn_years

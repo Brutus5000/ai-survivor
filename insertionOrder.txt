@@ -2,6 +2,7 @@ leaders
 turn_years
 civilizations
 game_type
+game_victory_type
 seasons
 technologies
 traits
