@@ -172,6 +172,7 @@
             <child column="leader_id" foreignKey="" implied="false" onDeleteCascade="false" table="leader_traits"/>
          </column>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="peace_weight" nullable="false" remarks="" size="2000000000" type="INTEGER" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="can_declare_at_pleased" nullable="false" remarks="" size="2000000000" type="INTEGER" typeCode="4"/>
          <primaryKey column="leader_id" sequenceNumberInPK="1"/>
          <index name="leaders_s_pk" unique="true">
             <column ascending="true" name="leader_id"/>
