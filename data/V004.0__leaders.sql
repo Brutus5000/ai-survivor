@@ -1,9 +1,10 @@
 create table leaders
 (
-    leader_id       text not null
+    leader_id               text not null
         constraint leaders_pk
             primary key,
-    peace_weight    integer not null
+    peace_weight            integer not null,
+    can_declare_at_pleased  integer not null
 );
 
 create table leader_traits

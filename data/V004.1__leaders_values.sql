@@ -1,261 +1,313 @@
-insert into leaders (leader_id, peace_weight) values
+insert into leaders (leader_id, peace_weight, can_declare_at_pleased) values
 
 (
     'ALEXANDER',
-    0
+    0,
+    1
 )
 ,
 (
     'ASOKA',
-    8
+    8,
+    0
 )
 ,
 (
     'AUGUSTUS',
-    8
+    8,
+    0
 )
 ,
 (
     'BISMARCK',
-    6
+    6,
+    1
 )
 ,
 (
     'BOUDICA',
-    2
+    2,
+    0
 )
 ,
 (
     'BRENNUS',
+    0,
     0
 )
 ,
 (
     'CATHERINE',
-    2
+    2,
+    1
 )
 ,
 (
     'CHARLEMAGNE',
-    6
+    6,
+    0
 )
 ,
 (
     'CHURCHILL',
-    6
+    6,
+    0
 )
 ,
 (
     'CYRUS',
-    3
+    3,
+    0
 )
 ,
 (
     'DARIUS',
-    8
+    8,
+    0
 )
 ,
 (
     'DE_GAULLE',
+    0,
     0
 )
 ,
 (
     'ELIZABETH',
-    9
+    9,
+    1
 )
 ,
 (
     'FREDERICK',
-    8
-)
-,
-(
-    'GANDHI',
-    10
-)
-,
-(
-    'GENGHIS_KHAN',
+    8,
     0
 )
 ,
 (
+    'GANDHI',
+    10,
+    0
+)
+,
+(
+    'GENGHIS_KHAN',
+    0,
+    1
+)
+,
+(
     'GILGAMESH',
-    2
+    2,
+    1
 )
 ,
 (
     'HAMMURABI',
-    8
+    8,
+    0
 )
 ,
 (
     'HANNIBAL',
-    2
+    2,
+    0
 )
 ,
 (
     'HATSHEPSUT',
-    9
+    9,
+    0
 )
 ,
 (
     'HUAYNA_CAPAC',
-    2
+    2,
+    1
 )
 ,
 (
     'ISABELLA',
-    6
+    6,
+    1
 )
 ,
 (
     'JOAO',
-    6
+    6,
+    0
 )
 ,
 (
     'JULIUS_CAESAR',
-    4
+    4,
+    1
 )
 ,
 (
     'JUSTINIAN',
-    4
+    4,
+    0
 )
 ,
 (
     'KUBLAI_KHAN',
+    1,
     1
 )
 ,
 (
     'LINCOLN',
-    9
+    9,
+    0
 )
 ,
 (
     'LOUIS_XIV',
+    1,
     1
 )
 ,
 (
     'MANSA_MUSA',
-    9
+    9,
+    1
 )
 ,
 (
     'CHINESE_LEADER',
+    1,
     1
 )
 ,
 (
     'MEHMED',
-    2
+    2,
+    0
 )
 ,
 (
     'MONTEZUMA',
-    0
+    0,
+    1
 )
 ,
 (
     'NAPOLEON',
-    0
+    0,
+    1
 )
 ,
 (
     'PACAL',
-    2
+    2,
+    1
 )
 ,
 (
     'PERICLES',
-    6
+    6,
+    0
 )
 ,
 (
     'PETER',
+    1,
     1
 )
 ,
 (
     'QIN_SHI_HUANG',
-    2
+    2,
+    1
 )
 ,
 (
     'RAMESSES',
-    6
-)
-,
-(
-    'RAGNAR',
+    6,
     0
 )
 ,
 (
+    'RAGNAR',
+    0,
+    1
+)
+,
+(
     'FRANKLIN_ROOSEVELT',
-    8
+    8,
+    1
 )
 ,
 (
     'SALADIN',
-    4
+    4,
+    0
 )
 ,
 (
     'SHAKA',
-    2
+    2,
+    1
 )
 ,
 (
     'SITTING_BULL',
-    8
+    8,
+    0
 )
 ,
 (
     'STALIN',
-    2
+    2,
+    1
 )
 ,
 (
     'SULEIMAN',
-    4
+    4,
+    0
 )
 ,
 (
     'SURYAVARMAN',
+    1,
     1
 )
 ,
 (
     'TOKUGAWA',
+    1,
     1
 )
 ,
 (
     'VICTORIA',
-    8
+    8,
+    1
 )
 ,
 (
     'WANGKON',
-    8
+    8,
+    0
 )
 ,
 (
     'WASHINGTON',
-    8
+    8,
+    0
 )
 ,
 (
     'WILLEM_VAN_ORANJE',
-    4
+    4,
+    1
 )
 ,
 (
     'ZARA_YAQOB',
-    6
+    6,
+    1
 );
