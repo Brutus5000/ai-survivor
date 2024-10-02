@@ -260,16 +260,110 @@ insert into game_wars (season_id, game_season_id, declared_by_leader_id, target_
 (8, 'WILDCARD_GAME_1', 'ZARA_YAQOB ', 'HATSHEPSUT', 284, 304);
 
 
--- Season 8: Game X
+-- Season 8: Wildcard Game 2
 
--- insert into game_participants (season_id, game_season_id, leader_id, turn_order_position, final_place, died_on_turn, killed_by_leader_id) values
---  (8, 'GAME_X', '', 1, null, null, null),
---  (8, 'GAME_X', '', 2, null, null, null),
---  (8, 'GAME_X', '', 3, null, null, null),
---  (8, 'GAME_X', '', 4, null, null, null),
---  (8, 'GAME_X', '', 5, null, null, null),
---  (8, 'GAME_X', '', 6, null, null, null),
---  (8, 'GAME_X', '', 7, null, null, null);
---
--- insert into game_wars (season_id, game_season_id, declared_by_leader_id, target_leader_id, declaring_turn, ending_turn) values
--- (8, 'GAME_X', '', '', null, null),
+insert into game_participants (season_id, game_season_id, leader_id, turn_order_position, final_place, died_on_turn, killed_by_leader_id) values
+ (8, 'WILDCARD_GAME_2', 'ALEXANDER', 1, 3, null, null),
+ (8, 'WILDCARD_GAME_2', 'BRENNUS', 2, 1, null, null),
+ (8, 'WILDCARD_GAME_2', 'CYRUS', 3, 2, null, null),
+ (8, 'WILDCARD_GAME_2', 'DE_GAULLE', 4, null, 231, 'WASHINGTON'),
+ (8, 'WILDCARD_GAME_2', 'SURYAVARMAN', 5, null, 159, 'BRENNUS'),
+ (8, 'WILDCARD_GAME_2', 'WASHINGTON', 6, 4, null, null),
+ (8, 'WILDCARD_GAME_2', 'WILLEM_VAN_ORANJE', 7, null, 210, 'ALEXANDER');
+
+insert into game_wars (season_id, game_season_id, declared_by_leader_id, target_leader_id, declaring_turn, ending_turn) values
+(8, 'WILDCARD_GAME_2', 'ALEXANDER', 'WILLEM_VAN_ORANJE', 78, 105),
+(8, 'WILDCARD_GAME_2', 'SURYAVARMAN', 'WASHINGTON', 109, 159),
+(8, 'WILDCARD_GAME_2', 'DE_GAULLE', 'WASHINGTON', 114, 124),
+(8, 'WILDCARD_GAME_2', 'WILLEM_VAN_ORANJE', 'DE_GAULLE', 118, 166),
+(8, 'WILDCARD_GAME_2', 'BRENNUS', 'SURYAVARMAN', 123, 159),
+(8, 'WILDCARD_GAME_2', 'ALEXANDER', 'WASHINGTON', 130, 155),
+(8, 'WILDCARD_GAME_2', 'ALEXANDER', 'WILLEM_VAN_ORANJE', 170, 210),
+(8, 'WILDCARD_GAME_2', 'WASHINGTON', 'DE_GAULLE', 181, 231),
+(8, 'WILDCARD_GAME_2', 'BRENNUS', 'WILLEM_VAN_ORANJE', 187, 210),
+(8, 'WILDCARD_GAME_2', 'ALEXANDER', 'DE_GAULLE', 229, 231),
+(8, 'WILDCARD_GAME_2', 'ALEXANDER', 'WASHINGTON', 266, 292),
+(8, 'WILDCARD_GAME_2', 'CYRUS', 'WASHINGTON', 271, 292) ,
+(8, 'WILDCARD_GAME_2', 'BRENNUS', 'WASHINGTON', 279, 292);
+
+
+-- Season 8: Playoff Game 1
+
+insert into game_participants (season_id, game_season_id, leader_id, turn_order_position, final_place, died_on_turn, killed_by_leader_id) values
+ (8, 'PLAYOFF_1', 'HAMMURABI', 1, 3, null, null),
+ (8, 'PLAYOFF_1', 'MANSA_MUSA', 2, 1, null, null),
+ (8, 'PLAYOFF_1', 'ELIZABETH', 3, 2, null, null),
+ (8, 'PLAYOFF_1', 'GILGAMESH', 4, null, 156, 'ELIZABETH'),
+ (8, 'PLAYOFF_1', 'PACAL', 5, null, 203, 'HAMMURABI'),
+ (8, 'PLAYOFF_1', 'LINCOLN', 6, 4, null, null);
+
+insert into game_wars (season_id, game_season_id, declared_by_leader_id, target_leader_id, declaring_turn, ending_turn) values
+(8, 'PLAYOFF_1', 'PACAL', 'HAMMURABI', 85, 171),
+(8, 'PLAYOFF_1', 'GILGAMESH', 'LINCOLN', 95, 133),
+(8, 'PLAYOFF_1', 'ELIZABETH', 'GILGAMESH', 107, 156),
+(8, 'PLAYOFF_1', 'MANSA_MUSA', 'GILGAMESH', 117 , 156),
+(8, 'PLAYOFF_1', 'MANSA_MUSA', 'PACAL', 181, 203),
+(8, 'PLAYOFF_1', 'HAMMURABI', 'PACAL', 184, 203);
+
+
+-- Season 8: Playoff Game 2
+
+insert into game_participants (season_id, game_season_id, leader_id, turn_order_position, final_place, died_on_turn, killed_by_leader_id) values
+ (8, 'PLAYOFF_2', 'JUSTINIAN', 1, null, 275, 'AUGUSTUS'),
+ (8, 'PLAYOFF_2', 'RAMESSES', 2, 4, null, null),
+ (8, 'PLAYOFF_2', 'AUGUSTUS', 3, 1, null, null),
+ (8, 'PLAYOFF_2', 'FREDERICK', 4, 3, null, null),
+ (8, 'PLAYOFF_2', 'GANDHI', 5, 2, null, null),
+ (8, 'PLAYOFF_2', 'BRENNUS', 6, null, 191, 'JUSTINIAN');
+
+insert into game_wars (season_id, game_season_id, declared_by_leader_id, target_leader_id, declaring_turn, ending_turn) values
+(8, 'PLAYOFF_2', 'BRENNUS', 'JUSTINIAN', 102, 121),
+(8, 'PLAYOFF_2', 'BRENNUS', 'GANDHI', 123, 191),
+(8, 'PLAYOFF_2', 'JUSTINIAN', 'GANDHI', 135, 160),
+(8, 'PLAYOFF_2', 'JUSTINIAN', 'BRENNUS', 173, 191),
+(8, 'PLAYOFF_2', 'JUSTINIAN', 'GANDHI', 209, 238),
+(8, 'PLAYOFF_2', 'AUGUSTUS', 'JUSTINIAN', 224, 275 ),
+(8, 'PLAYOFF_2', 'RAMESSES', 'JUSTINIAN', 246, 275),
+(8, 'PLAYOFF_2', 'GANDHI', 'JUSTINIAN', 260, 275),
+(8, 'PLAYOFF_2', 'FREDERICK', 'JUSTINIAN', 261, 275);
+
+
+-- Season 8: Playoff Game 3
+
+insert into game_participants (season_id, game_season_id, leader_id, turn_order_position, final_place, died_on_turn, killed_by_leader_id) values
+ (8, 'PLAYOFF_3', 'SITTING_BULL', 1, 3, null, null),
+ (8, 'PLAYOFF_3', 'VICTORIA', 2, null, 255, 'MEHMED'),
+ (8, 'PLAYOFF_3', 'PERICLES', 3, null, 184, 'MEHMED'),
+ (8, 'PLAYOFF_3', 'CHURCHILL', 4, 1, null, null),
+ (8, 'PLAYOFF_3', 'QIN_SHI_HUANG', 5, 2, null, null),
+ (8, 'PLAYOFF_3', 'MEHMED', 6, null, 370, 'CHURCHILL');
+
+insert into game_wars (season_id, game_season_id, declared_by_leader_id, target_leader_id, declaring_turn, ending_turn) values
+(8, 'PLAYOFF_3', 'PERICLES', 'SITTING_BULL', 106, 184),
+(8, 'PLAYOFF_3', 'QIN_SHI_HUANG', 'SITTING_BULL', 119, 176),
+(8, 'PLAYOFF_3', 'MEHMED', 'PERICLES', 126, 184),
+(8, 'PLAYOFF_3', 'CHURCHILL', 'VICTORIA', 146, 172),
+(8, 'PLAYOFF_3', 'MEHMED', 'SITTING_BULL', 197, 224),
+(8, 'PLAYOFF_3', 'CHURCHILL', 'VICTORIA', 200, 255),
+(8, 'PLAYOFF_3', 'MEHMED', 'VICTORIA', 252, 255),
+(8, 'PLAYOFF_3', 'SITTING_BULL', 'MEHMED', 265, 370),
+(8, 'PLAYOFF_3', 'CHURCHILL', 'MEHMED', 343, 370),
+(8, 'PLAYOFF_3', 'QIN_SHI_HUANG', 'MEHMED', 360, 370);
+
+
+-- Season 8: Championship Game
+
+insert into game_participants (season_id, game_season_id, leader_id, turn_order_position, final_place, died_on_turn, killed_by_leader_id) values
+ (8, 'CHAMPIONSHIP', 'MANSA_MUSA', 1, 3, null, null),
+ (8, 'CHAMPIONSHIP', 'ELIZABETH', 2, 1, null, null),
+ (8, 'CHAMPIONSHIP', 'AUGUSTUS', 3, 4, null, null),
+ (8, 'CHAMPIONSHIP', 'GANDHI', 4, 2, null, null),
+ (8, 'CHAMPIONSHIP', 'CHURCHILL', 5, 5, null, null),
+ (8, 'CHAMPIONSHIP', 'QIN_SHI_HUANG', 6, null, 207, 'AUGUSTUS');
+
+insert into game_wars (season_id, game_season_id, declared_by_leader_id, target_leader_id, declaring_turn, ending_turn) values
+(8, 'CHAMPIONSHIP', 'AUGUSTUS', 'QIN_SHI_HUANG', 119, 207),
+(8, 'CHAMPIONSHIP', 'CHURCHILL', 'GANDHI', 219, 278),
+(8, 'CHAMPIONSHIP', 'MANSA_MUSA', 'CHURCHILL', 232, 236),
+(8, 'CHAMPIONSHIP', 'AUGUSTUS', 'GANDHI', 255, 283),
+(8, 'CHAMPIONSHIP', 'MANSA_MUSA', 'GANDHI', 277, 283);
