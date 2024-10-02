@@ -32,7 +32,6 @@ Help us collect raw game data from the series in SQL files. Fix errors if you fi
 
 ## What's next?
 
-* Process all base game XML (looks like right now I only have BTS files)
-* Populate the season data
+* Populate the season data for season 1-7 (season 8 is done)
 * Calculate leader scores
 * Make fancy statistics
