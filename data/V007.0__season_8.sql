@@ -16,7 +16,7 @@ insert into leader_pools (season_id, leader_id, pool) values
 (8, 'GANDHI', 2),
 (8, 'GILGAMESH', 2),
 (8, 'HANNIBAL', 2),
-(8, 'LOUIS', 2),
+(8, 'LOUIS_XIV', 2),
 (8, 'CHINESE_LEADER', 2);
 
 
